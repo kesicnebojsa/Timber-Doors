@@ -1,0 +1,34 @@
+#Main h2 {
+	margin:2px 0px 2px 0px;
+	text-align: center;
+}
+#Main p {
+	margin:2px 0px 2px 0px;
+}
+#Form img {
+    width: 100%;
+}
+#Logo {
+	width: 20%;
+}
+#Order {
+	text-align: center;
+	font-size: 30px;
+}
+#SupplierDetails, #Warranty, #DoorDetails, #LockDetails, #RebatedPairs {
+	width: 100%;
+	border:1px solid black;
+	margin:10px 0px 10px 0px;
+}
+#Img {
+    width: 200px;
+    margin:0px 0px 0px 1px;
+}
+.space {
+	margin:0px 0px 0px 4px;
+}
+.colour {
+	margin:1px 1px 1px 1px;
+	border: solid #DCDCDC 1px;
+	background:#DCDCDC;
+}

@@ -1,0 +1,19 @@
+.MainTable  {border-collapse:collapse;border-spacing:0;border:none;}
+.MainTable td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.MainTable th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;color: white;}
+.MainTable .Heading{vertical-align:top}
+
+.DoorModel {border-collapse:collapse;border-spacing:0;border:none;margin:0px 0px 0px 0px;page-break-inside: avoid;}
+.DoorModel td{font-family:Arial, sans-serif;font-size:10px;padding:5px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.DoorModel th{font-family:Arial, sans-serif;font-size:10px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+
+.DoorModel .ImgContainer{padding:0px 0px;vertical-align:top}
+
+.DoorModel .CodeColumn{background-color:#969a9e;vertical-align:top; width:65px;text-align:center}
+.DoorModel .CodeCell{vertical-align:top;text-align:center; width:50px;}
+
+.DoorModel .TimbersColumn{background-color:#969a9e;vertical-align:top;width:100px;}
+.DoorModel .TimbersCell{vertical-align:top;}
+
+.DoorModel .PriceColumn{background-color:#969a9e;vertical-align:top;width:50px;text-align:center}
+.DoorModel .PriceCell{background-color:#d3cdcb;vertical-align:top;text-align:center}
