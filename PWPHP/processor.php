@@ -22,21 +22,30 @@ elseif (isset($_POST['Next']) && ($_POST['Next']=='true')):
 	endforeach;
 
 	$validate = new Validate;
-	$required = [
-		'Name'=>$Name,
-		'Address1'=>$Address1,
-		'Phone'=>$Phone,
-		'Email'=>$Email
-	];
-	// CHECK REQUIRED
-	$validate->CheckRequiredArray($required);
-	// VALIDATE
-	$validate->CheckName($Name, 'Name');
-	$validate->CheckAddress($Address1, 'Address1');
-	$validate->CheckAddress($Address2, 'Address2');
-	$validate->CheckPhone($Phone, 'Phone');
-	$validate->CheckEmail($Email, 'Email');
-	$validate->CheckName($Contact, 'Contact');
+
+	if(isset($Name) && $Name !=='') {
+		$validate->CheckName($Name, 'Name');
+	}
+
+	if(isset($Address1) && $Address1 !=='') {
+		$validate->CheckAddress($Address1, 'Address1');
+	}
+
+	if(isset($Address2) && $Address2 !=='') {
+		$validate->CheckAddress($Address2, 'Address2');
+	}
+
+	if(isset($Phone) && $Phone !=='') {
+		$validate->CheckPhone($Phone, 'Phone');
+	}
+
+	if(isset($Email) && $Email !=='') {
+		$validate->CheckEmail($Email, 'Email');
+	}
+
+	if(isset($Contact) && $Contact !=='') {
+		$validate->CheckName($Contact, 'Contact');
+	}
 
 	if (!empty($validate->GetErrors())):
 		die(json_encode($validate->GetErrors()));

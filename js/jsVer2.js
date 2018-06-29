@@ -414,7 +414,7 @@ $('#sectionOneButtonTimber').on('click', function() {
     	type: 'POST',
     	url: "PWPHP/processor.php",
         data: {Next, tabOneValues},
-        success: function(result){
+        success: function(result){			
 
 			//Check required inputs on php response
 
@@ -470,6 +470,8 @@ $('#sectionOneButtonTimber').on('click', function() {
 			$('#userDetailsPageTimber').addClass('formWrapperDisplayNone');
 			$('#formShareMailTimber, #allModelsWrapper').removeClass('formWrapperDisplayNone');
 			$('#formWrapperTimber').addClass('formWrapperDisplayNone');
+			
+			$('#all_codes_main').css('display', 'block');	
 		},
         error: function(xhr,status,error){
         	console.log(xhr);
@@ -874,8 +876,11 @@ $('#calcTab1Timber').click(function(){
 	$('#userDetailsPageTimber').removeClass('formWrapperDisplayNone');
 	$('#formShareMailTimber, #allModelsWrapper').addClass('formWrapperDisplayNone');
 	$('#formWrapperTimber').addClass('formWrapperDisplayNone');
+	
+	$('#all_codes_main').css('display', 'none');
 });
 $('#calcTab2Timber').click(function(){
+	$('#all_codes_main').css('display', 'block');
 	tab1Inputs();
 	doAllCalculations();
 
@@ -942,6 +947,7 @@ $('#calcTab2Timber').click(function(){
 });
 
 $('#calcTab3Timber').click(function(){
+	$('#all_codes_main').css('display', 'none');
 	tab1Inputs();
 
 	$.ajax({
@@ -1038,7 +1044,7 @@ $('#showHideDoorCodes').on("click", function() {
 // Door codes scroll to door
 $('#all_codes_all_codes > div').on("click", function() {
 	var elementText = $(this).find('h4').html().split(' ').join('');
-	elementText = elementText.split('&').join('');
+	elementText = elementText.split('&amp;').join('');
 	elementText = elementText.split('/').join('');
 	elementText = elementText.split('.').join('');
 	elementText = elementText.split(')').join('');

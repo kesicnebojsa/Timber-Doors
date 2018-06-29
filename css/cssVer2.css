@@ -920,7 +920,7 @@ section > div {
     color: #fff;
 }
 #all_codes_main {
-    display: block;
+    display: none;
     position: fixed;
     width: 1450px;
     top: 180px;

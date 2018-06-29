@@ -37,11 +37,11 @@
 				<form id="detailsFormWrappertimber">
 					<div class="inputLabelTimber">
 						<label>Name:</label>
-						<input placeholder="Required" type="text" id='inputNameTimber' />
+						<input placeholder="" type="text" id='inputNameTimber' />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Address:</label>
-						<input placeholder="Required" type="text" id='inputAddressTimber' />
+						<input placeholder="" type="text" id='inputAddressTimber' />
 					</div>
 					<div class="inputLabelTimber">
 						<label></label>
@@ -49,11 +49,11 @@
 					</div>
 					<div class="inputLabelTimber">
 						<label>Phone:</label>
-						<input placeholder="Required" type="text" id='inputPhoneTimber' />
+						<input placeholder="" type="text" id='inputPhoneTimber' />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Email:</label>
-						<input placeholder="Required" type="email" id='inputEmailTimber' />
+						<input placeholder="" type="email" id='inputEmailTimber' />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Contact:</label>
@@ -762,12 +762,7 @@ require_once dirname(__FILE__) . '/PWPHP/class/DoorModel.php';
 foreach ($doors as $k => $v):
 	foreach ($v as $dc => $dm):
 		$d = new DoorModel($dc);
-        $idNoSpace = str_replace(' ', '', $dm);
-        $idNoSpace = str_replace('&', '', $idNoSpace);
-        $idNoSpace = str_replace('/', '', $idNoSpace);
-        $idNoSpace = str_replace('(', '', $idNoSpace);
-        $idNoSpace = str_replace(')', '', $idNoSpace);
-        $idNoSpace = str_replace('.', '', $idNoSpace); ?>
+        $idNoSpace = str_replace([' ','&','/','(',')','.'], '', $dm); ?>
 			<div class='mainWrapper1TimberDoors' id='<?php o($idNoSpace);?>'>
 				<div class='codeTimberDoorsH2'>
 					<h2><?php o($dm);?></h2>
