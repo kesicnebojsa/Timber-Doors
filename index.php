@@ -4,7 +4,7 @@
 <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
 <meta charset="utf-8" />
 	<title>Timber Doors</title>
-	<link rel="stylesheet" href="css/cssVer2.css">
+	<link rel="stylesheet" href="css/cssVer3.css">
 </head>
 <body>
 	<div id='mainWrapperTimber'>
@@ -868,6 +868,6 @@ foreach ($doors as $k => $v):
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/prices.js"></script>
-<script src="js/jsVer2.js"></script>
+<script src="js/jsVer3.js"></script>
 </body>
 </html>
