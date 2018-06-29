@@ -34,12 +34,17 @@ function addDrillPairGlassExtracolor() {
 }
 
 var price;
+var extra40PercForWidth = false;
+var extra40PercForHeight = false;
 function changeAllPrices() {
-		var count = 0;
+	var count = 0;
 	$.each( allModelsObejct, function( key, value ) {
+		extra40PercForWidth = false;
+		extra40PercForHeight = false;
 		count++;
 		price = value.startPrice;
 	  	var id = value.id;
+	  	var doorType = Object.keys(allModelsObejct)[count-1].slice(0, 3);
 
 	  	if (value.minWidth) {
 		  	if (DOORWIDTH < value.minWidth)	{
@@ -49,19 +54,29 @@ function changeAllPrices() {
 		  	}
 	  	}
 
-	  	if (value.maxWidth) {
-		  	if (DOORWIDTH > value.maxWidth)	{
-		  		$(id).text('N/A');
-		  		emailObject[key] = 'N/A';
-		  		return;
+	  	if ( (value.maxWidth) || (DOORWIDTH > 1000) ) {
+		  	if ( (DOORWIDTH > value.maxWidth) || (DOORWIDTH > 1000) ) {
+		  		// no door can go over 2600, but PQC, SQC and PQV can go up to 2600
+		  		if ( (DOORWIDTH > 1200) || ( ((doorType !='PQC') && (doorType !='SQC') && (doorType !='PQV')) && (DOORWIDTH > 1000) ) ) {
+			  		$(id).text('N/A');
+			  		emailObject[key] = 'N/A';
+			  		return;		  			
+		  		}else{
+		  			extra40PercForWidth = true;
+		  		}
 		  	}
 	  	}
 
-	  	if (value.maxHeight) {
-		  	if (DOORHEIGHT > value.maxHeight)	{
-		  		$(id).text('N/A');
-		  		emailObject[key] = 'N/A';
-		  		return;
+	  	if ( (value.maxHeight) || (DOORHEIGHT > 2400) ) {
+		  	if ( (DOORHEIGHT > value.maxHeight) || (DOORHEIGHT > 2400) ) {
+		  		// no door can go over 1200 height, but PQC, SQC and PQV can go up to 1200
+		  		if ( (DOORHEIGHT > 2600) || ( ((doorType !='PQC') && (doorType !='SQC') && (doorType !='PQV')) && (DOORHEIGHT > 2400) ) ) {
+			  		$(id).text('N/A');
+			  		emailObject[key] = 'N/A';
+			  		return;		  			
+		  		}else{
+		  			extra40PercForHeight = true;
+		  		}
 		  	}
 	  	}
 
@@ -69,12 +84,31 @@ function changeAllPrices() {
 	  		value.extraCalc();
 	  	}else{
 		  	if (DOORHEIGHT > 1980) {
-		  		price = price / 1980 * DOORHEIGHT;
+		  		if (extra40PercForHeight) {
+		  			// if there is extra 40% added, that 40% is added to price of 2400 height
+		  			price = price / 1980 * 2400;
+		  		}else{
+			  		price = price / 1980 * DOORHEIGHT;		  			
+		  		}
 		  	}
 		  	if (DOORWIDTH > 860) {
-		  		price = price / 860 * DOORWIDTH;
+		  		if (extra40PercForWidth) {
+		  			// if there is extra 40% added, that 40% is added to price of 1000 width
+			  		price = price / 860 * 1000;
+			  	}else{
+			  		price = price / 860 * DOORWIDTH;
+			  	}
 		  	}
 	  	}
+	  	// extra price for 1000+ width and 2400+ height for those models that can go up to 1200 and 2600
+	  	if (extra40PercForWidth && extra40PercForHeight) {
+	  		price = 1.6 * price;
+	  	}else{
+	  		if (extra40PercForWidth || extra40PercForHeight) {
+	  			price = 1.4 * price;
+	  		}
+	  	}
+
 		//     GLASS PRICING
 		switch(DOORGLASS) {
 		    case 'clearGlass':
@@ -994,6 +1028,26 @@ $('#glassFormHeading span').on("click", function() {
 	}else {
 		$('#paragraphDivGlassCalcAbsolute').css('display', 'none');
 	}
+});
+
+// show/hide Door Codes
+$('#showHideDoorCodes').on("click", function() {
+	$('#all_codes_all_codes').toggle('display');
+});
+
+// Door codes scroll to door
+$('#all_codes_all_codes > div').on("click", function() {
+	var elementText = $(this).find('h4').html().split(' ').join('');
+	elementText = elementText.split('&').join('');
+	elementText = elementText.split('/').join('');
+	elementText = elementText.split('.').join('');
+	elementText = elementText.split(')').join('');
+	elementText = elementText.split('(').join('');
+	console.log(elementText);
+	$('#all_codes_all_codes').toggle('display');
+	$('html, body').animate({
+        scrollTop: $(`#${elementText}`).offset().top
+    }, 500);
 });
 
 // do calculations on input/select changes

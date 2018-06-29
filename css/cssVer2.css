@@ -907,7 +907,7 @@ section > div {
 }
 #mainWrapperTimber #all_codes_main .inlineClass {
     display: inline-block;
-    width: 200px;
+    width: 120px;
     height: 30px;
     text-align: center;
     font-size: 12px;
@@ -920,8 +920,8 @@ section > div {
     color: #fff;
 }
 #all_codes_main {
-    position: fixed;
     display: block;
+    position: fixed;
     width: 1450px;
     top: 180px;
     left: 5%;
@@ -939,7 +939,16 @@ section > div {
 }
 #all_codes_all_codes {
     border: 1px solid black;
+    width: 760px;
+    display: none;
 }  
+#all_codes_all_codes h3 {
+    text-align: left;
+    padding: 10px;
+}
+#all_codes_all_codes h4 {
+    font-size: 12px;
+}
 /*  entrence timber doors */
 
 
@@ -1318,7 +1327,8 @@ section > div {
 	right: 0px;
 	z-index: 1;
 	background-color:#6d665d;
-	color:#ff9000;  
+	color:#ff9000; 
+    padding: 10px; 
 }
 .inputHeightWidthTimber label {
 	display: inline-block;

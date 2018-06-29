@@ -75,8 +75,9 @@
 		</div>
         <div class='clear'></div>
         <section id="all_codes_main">
-        	<h1>Click here to see all door codes</h1>
+        	<h1><button id="showHideDoorCodes">Click here to see all door codes</button></h1>
         	<div id="all_codes_all_codes">
+                <h3> Entrance </h3>
         		<div id="code_1" class="inlineClass">
         			<h4>E1</h4>
         		</div>
@@ -266,6 +267,7 @@
         		<div id="code_64" class="inlineClass">
         			<h4>PIONEER 4 O/T</h4>
         		</div>
+                <h3> Internal </h3>
         		<div id="code_65" class="inlineClass">
         			<h4>IP1</h4>
         		</div>
@@ -759,8 +761,14 @@ require_once dirname(__FILE__) . '/PWPHP/includes/arrays.php';
 require_once dirname(__FILE__) . '/PWPHP/class/DoorModel.php';
 foreach ($doors as $k => $v):
 	foreach ($v as $dc => $dm):
-		$d = new DoorModel($dc);?>
-			<div class='mainWrapper1TimberDoors'>
+		$d = new DoorModel($dc);
+        $idNoSpace = str_replace(' ', '', $dm);
+        $idNoSpace = str_replace('&', '', $idNoSpace);
+        $idNoSpace = str_replace('/', '', $idNoSpace);
+        $idNoSpace = str_replace('(', '', $idNoSpace);
+        $idNoSpace = str_replace(')', '', $idNoSpace);
+        $idNoSpace = str_replace('.', '', $idNoSpace); ?>
+			<div class='mainWrapper1TimberDoors' id='<?php o($idNoSpace);?>'>
 				<div class='codeTimberDoorsH2'>
 					<h2><?php o($dm);?></h2>
 					<div class='clear'></div>
