@@ -1,9 +1,15 @@
 <?php
-require_once dirname(__FILE__) . '/class/Validate.php';
-require_once dirname(__FILE__) . '/class/PHPMailer/PHPMailerAutoload.php';
+define('DS', DIRECTORY_SEPARATOR);
+define('CLASSES', __DIR__ . '/class/');
+spl_autoload_register(function($class){
+	$ClassFileName = str_replace('\\', DS, $class) . '.php';
+	if(file_exists(CLASSES. $ClassFileName)){
+		require_once CLASSES . $ClassFileName;
+	}
+});
 require_once dirname(__FILE__) . '/includes/arrays.php';
 require_once dirname(__FILE__) . '/class/DoorModel.php';
-$mail = new PHPMailer;
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 
 #################### TAB1 Check Email as you type ####################################################
 
