@@ -75,7 +75,7 @@
 		</div>
         <div class='clear'></div>
         <section id="all_codes_main">
-        	<h1><button id="showHideDoorCodes">Click here to see all door codes</button></h1>
+        	<!-- <h1><button id="showHideDoorCodes">Click here to see all door codes</button></h1> -->
         	<div id="all_codes_all_codes">
                 <h3> Entrance </h3>
         		<div id="code_1" class="inlineClass">

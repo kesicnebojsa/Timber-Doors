@@ -105,7 +105,7 @@ function changeAllPrices() {
 	  		price = 1.6 * price;
 	  	}else{
 	  		if (extra40PercForWidth || extra40PercForHeight) {
-	  			price = 1.4 * price;
+	  			price = 1.3 * price;
 	  		}
 	  	}
 
@@ -1036,10 +1036,10 @@ $('#glassFormHeading span').on("click", function() {
 	}
 });
 
-// show/hide Door Codes
-$('#showHideDoorCodes').on("click", function() {
-	$('#all_codes_all_codes').toggle('display');
-});
+// // show/hide Door Codes
+// $('#showHideDoorCodes').on("click", function() {
+// 	$('#all_codes_all_codes').toggle('display');
+// });
 
 // Door codes scroll to door
 $('#all_codes_all_codes > div').on("click", function() {
@@ -1050,7 +1050,7 @@ $('#all_codes_all_codes > div').on("click", function() {
 	elementText = elementText.split(')').join('');
 	elementText = elementText.split('(').join('');
 	console.log(elementText);
-	$('#all_codes_all_codes').toggle('display');
+	// $('#all_codes_all_codes').toggle('display');
 	$('html, body').animate({
         scrollTop: $(`#${elementText}`).offset().top
     }, 500);
@@ -1066,3 +1066,6 @@ $('#eyeViewerTimber, #extraColorTimber').on('change',function(){
 $('select').on('change', function() {
 	doAllCalculations();
 });
+
+// DEV
+// $('#calcTab2Timber').trigger('click');

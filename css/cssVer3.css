@@ -61,6 +61,7 @@ form {
 }
 section {
     width: 1800px;
+    padding-left: 375px;
 }
 .clear {
     clear: both;
@@ -73,6 +74,9 @@ input {
     padding: 1px;
     width: 200px;
     border-radius: 5px;
+}
+h2 {
+    font-size: 16px;
 }
 h4 {
     font-size: 16px;
@@ -787,7 +791,7 @@ b {
     height: 0px;
 }
 .mainWrapper1TimberDoors {
-    width: 750px;
+    width: 550px;
     height:500px; 
     background-color: white;
     margin:50px 20px 50px 20px;
@@ -821,23 +825,23 @@ img {
 }
 .priceMainGrayHeadline {
     height: 40px;
-    width: 530px;
+    width: 350px;
     background-color: #969a9e;
     color: #ffffff;
     border-radius: 10px 10px 0px 10px;
 }
 .headlineGray1,.headlineGray1Entrence,.headlineGray1Entrence52 {
-    width: 120px;
+    width: 80px;
     line-height: 40px;
     text-align: center;
     float: left;
     font-size: 18px;
 }
 .headlineGray2,.headlineGray2Entrence,.headlineGray2Entrence52 {
-    width: 230px;
+    width: 170px;
     line-height: 40px;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 20px;
     float: left;
     font-size: 18px;
 }
@@ -851,7 +855,7 @@ img {
 .twoLeftDivs {
     float: left;
     background-color: white;
-    width: 450px;
+    width: 270px;
     color: black;
 }
 .doorCode > div {
@@ -860,14 +864,17 @@ img {
 }
 .doorCode  {
     float: left;
-    width: 120px;
+    width: 80px;
     text-align: center;
 } 
+.doorCode h2 {
+    font-size: 14px;
+}
 .availebleTimbers {
     float: left;
-    width: 230px;
+    width: 170px;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 20px;
 }
 .availebleTimbers > div {
@@ -908,7 +915,7 @@ section > div {
 #mainWrapperTimber #all_codes_main .inlineClass {
     display: inline-block;
     width: 120px;
-    height: 30px;
+    /*height: 30px;*/
     text-align: center;
     font-size: 12px;
     float: none;
@@ -922,13 +929,14 @@ section > div {
 #all_codes_main {
     display: none;
     position: fixed;
-    width: 1450px;
+    width: 382px;
     top: 180px;
-    left: 5%;
+    left: 1px;
     background-color: white;
     color:black;
     text-align: center;
     font-size: 18px;
+    padding: 0px;
 }
 #all_codes_main h1 {
     margin-top: 10px;
@@ -938,16 +946,20 @@ section > div {
     cursor: pointer;
 }
 #all_codes_all_codes {
-    border: 1px solid black;
-    width: 760px;
-    display: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 380px;
+    /*display: none;*/
 }  
 #all_codes_all_codes h3 {
     text-align: left;
     padding: 10px;
+    background-color: #ededed;
+    font-weight: 600;
 }
 #all_codes_all_codes h4 {
     font-size: 12px;
+    margin: 1px 0px;
 }
 /*  entrence timber doors */
 
@@ -2409,6 +2421,9 @@ section > div {
 		color-adjust: exact;
         margin: 25mm 25mm 25mm 30mm;
 	}
+    #all_codes_main {
+        display: none !important;
+    }
 	#formShareMailTimber {
 	   	display: none;
 	}
