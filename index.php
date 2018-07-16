@@ -27,6 +27,12 @@
 					<h5> 3 </h5>
 				</div>
 				<div class='clear'></div>
+                <div id="all_pages_warrenty_warning">
+                    <a href="http://parkwooddoors.co.nz/brochures/door-warranties/"><p>All exterior timber doors must be placed in a weather protected situation to be covered by warranty.</p></a>
+                </div>
+                <div id="all_pages_warrenty_warning1">
+                    <a href="quotes@parkwooddoors.co.nz"><p>Contact us for all prices outside this tool. Email quotes@parkwooddoors.co.nz</p></a>
+                </div>
 			</div>
 			<section id='userDetailsPageTimber'>
 				<section id="logoWrapperTimber">
@@ -505,30 +511,24 @@
 					<div id="doorDetailsForm1Timber" class='backgDoorTypetimber'>
 						<div id="comAndDoorFormTimber">
 							<div id='pPlusInputDoorDet1'>
-								<div id='pPlusInputDoorDet1Son1'>
-									<p id="secondInputCnTimber">Door Code : </p>
-								</div>
-								<div id='pPlusInputDoorDet1Son2'>
-									<input class='marginClassInputs largeInputsHeight' type="text" name="DoorCode" id="DoorCode1Timber" value="" placeholder="Required" required>
-								</div>
+								<p>Door Code : </p>
+								<input class='marginClassInputs largeInputsHeight' type="text" name="DoorCode" id="DoorCode1Timber" value="" placeholder="Required" required>
 							</div>
 							<div id='pPlusInputDoorDet2'>
-								<div id='pPlusInputDoorDet1Son3'>
-									<p id="secondInputDColorTimber">Timber Type : </p>
-								</div>
-								<div id='pPlusInputDoorDet1Son4'>
-									<input class=' largeInputsHeight marginClassInputs' type="text" name="TimberType" id="doorColorTimber" value="">
-								</div>
+								<p>Timber Type : </p>
+								<select class=' largeInputsHeight marginClassInputs' name="TimberType" id="doorColorTimber" value="">
+                                    <option value="volvo">Paint quality Pine</option>
+                                    <option value="saab">Paint quality Cedar</option>
+                                    <option value="mercedes">Stain quality Cedar</option>
+                                    <option value="audi">Paint quality Vulcan+</option>
+                                    <option value="mercedes">Rosewood</option>
+                                    <option value="audi">American White Ash</option>
+                                </select>
 							</div>
 							<div id='pPlusInputDoorDet3'>
-								<div id='pPlusInputDoorDet1Son5'>
-									<p id='otyPId' id="secondInputOtyTimber">Qty : </p>
-								</div>
-								<div id='pPlusInputDoorDet1Son6'>
-									<input class='largeInputsHeight marginClassInputs' type="number" name="Qty" id="OtyLabelTimber" value="">
-								</div>
+								<p>Qty : </p>
+								<input class='largeInputsHeight marginClassInputs' type="number" name="Qty" id="OtyLabelTimber" value="">
 							</div>
-							<div class='clear'></div>
 						</div>
 					</div>
 					<div class='clear'></div>

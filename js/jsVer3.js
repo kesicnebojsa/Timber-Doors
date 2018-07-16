@@ -1068,4 +1068,4 @@ $('select').on('change', function() {
 });
 
 // DEV
-// $('#calcTab2Timber').trigger('click');
+$('#calcTab2Timber').trigger('click');

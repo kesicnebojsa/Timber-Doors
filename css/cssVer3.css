@@ -61,7 +61,11 @@ form {
 }
 section {
     width: 1800px;
-    padding-left: 375px;
+}
+#allModelsWrapper > section {
+    width: 1220px;
+    margin: 0 auto;
+    padding-left: 40px;
 }
 .clear {
     clear: both;
@@ -1392,6 +1396,36 @@ section > div {
 #secondFormTimber #heightInputTimber #h3IdSpan {
     font-size: 14px;
 }
+#all_pages_warrenty_warning {
+   font-size: 20px;
+   margin-top: 10px;
+   padding-bottom: 10px;
+}
+#all_pages_warrenty_warning:hover {
+    cursor: pointer;
+}
+#all_pages_warrenty_warning p {
+    color:#ffee00;
+    font-weight: 600;
+}
+#all_pages_warrenty_warning a {
+    text-decoration: none;
+}
+#all_pages_warrenty_warning1 {
+    font-size: 20px;
+    margin-top: 10px;
+   padding-bottom: 10px;
+}
+#all_pages_warrenty_warning1:hover {
+    cursor: pointer;
+}
+#all_pages_warrenty_warning1 p {
+    color:#ffee00;
+    font-weight: 600;
+}
+#all_pages_warrenty_warning1 a {
+    text-decoration: none;
+}
 @media (max-width:1850px) {
 	.mainWrapper1TimberDoors {
 		min-width: 610px;
@@ -1903,11 +1937,26 @@ section > div {
     	margin: 0 auto;
     	width: 100%;
     }
-    #pPlusInputDoorDet1,#pPlusInputDoorDet2,#pPlusInputDoorDet3,#pPlusInputDoorDet4,#pPlusInputDoorDet5,#pPlusInputDoorDet6 {
+    #mainWrapperTimber #pPlusInputDoorDet4,#mainWrapperTimber #pPlusInputDoorDet5,#mainWrapperTimber #pPlusInputDoorDet6 {
     	margin: 0 auto;
-    	width: 440px;
+    	width: 320px;
     	float: none;
     	height: 25px;
+    }
+    #mainWrapperTimber #pPlusInputDoorDet3,#mainWrapperTimber #pPlusInputDoorDet2,#mainWrapperTimber #pPlusInputDoorDet1 {
+        display: inline-block;
+        float: none;
+        width: 440px;
+        margin: 0px;
+        background-color: red;
+    }
+    #mainWrapperTimber #comAndDoor  #pPlusInputDoorDet3 p,#mainWrapperTimber #pPlusInputDoorDet2 p,#mainWrapperTimber #pPlusInputDoorDet1 p {
+        display: inline-block;
+        float: none;
+    }
+    #mainWrapperTimber #pPlusInputDoorDet3 input,#mainWrapperTimber #pPlusInputDoorDet2 select,#mainWrapperTimber #pPlusInputDoorDet1 input {
+        display: inline-block;
+        float: none;
     }
     #pPlusInputDoorDet1Son2 {
     	float: left;
@@ -1928,6 +1977,7 @@ section > div {
     }
     #doorDetailsWrapperTimber #doorColorTimber {
     	display: inline-block;
+        width: 200px;
     }
     #pPlusInputDoorDet1Son3 {
     	float: left;
