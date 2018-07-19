@@ -333,9 +333,9 @@
         		</div>
         		<div id="code_84" class="inlineClass">
         			<h4>AR63</h4>
-        		</div>	
-        	</div>	
-        </section>	
+        		</div>
+        	</div>
+        </section>
 		<section>
 			<form id='formShareMailTimber' class='formWrapperDisplayNone'>
 				<div id='calcInputsDivTimber'>
@@ -384,7 +384,7 @@
 									<p><b>A</b>ll paint quality pricing exclude beads</p>
 									<p><b>S</b>elect double glazing beads only or glass from the drop down below</p>
 								</div>
-							</div>	
+							</div>
 						<select id="glassTimber">
 							<option name='glassTimber' value="noGlass">No Glass</option>
 							<option name='glassTimber' value="clearGlass">Clear or Tinted</option>
@@ -419,18 +419,18 @@
             	<div id='emailWarningRelative13'>
             		<div id='emailWarningAbsolute13'>
             			<img src="img/blueXno.png">
-            		</div>	
-            	</div>	
+            		</div>
+            	</div>
             	<h2>EMAIL SENT</h2>
             </div>
             <div id='emailWarningSecondPage23'>
             	<div id='emailWarningRelative23'>
             		<div id='emailWarningAbsolute23'>
             			<img src="img/blueXno.png">
-            		</div>	
-            	</div>	
+            		</div>
+            	</div>
             	<h2>EMAIL NOT SENT</h2>
-            </div>		
+            </div>
 			<div id="headLineOrderTimber">
 				<div id="logoDivTimber">
 					<img src="img/Logo.jpg" alt="logo">
@@ -743,23 +743,30 @@
             	<div id='emailWarningRelative1'>
             		<div id='emailWarningAbsolute1'>
             			<img src="img/blueXno.png">
-            		</div>	
-            	</div>	
+            		</div>
+            	</div>
             	<h2>EMAIL SENT</h2>
             </div>
             <div id='emailWarningSecondPage2'>
             	<div id='emailWarningRelative2'>
             		<div id='emailWarningAbsolute2'>
             			<img src="img/blueXno.png">
-            		</div>	
-            	</div>	
+            		</div>
+            	</div>
             	<h2>EMAIL NOT SENT</h2>
-            </div>		
+            </div>
 		<section>
+
+		<h1 id="entrance_door_models_title"> ENTRANCE DOORS </h1>
+
 <?php
 require_once dirname(__FILE__) . '/PWPHP/includes/arrays.php';
 require_once dirname(__FILE__) . '/PWPHP/class/DoorModel.php';
-foreach ($doors as $k => $v):
+foreach ($doors as $k => $v): ?>
+	<?php if ($k === 64): ?>
+		<h1 id="internal_door_models_title"> INTERNAL DOORS </h1>
+	<?php endif; ?>
+	<?php
 	foreach ($v as $dc => $dm):
 		$d = new DoorModel($dc);
         $idNoSpace = str_replace([' ','&','/','(',')','.'], '', $dm); ?>
@@ -856,7 +863,7 @@ foreach ($doors as $k => $v):
 		</section>
 		<section>
 <?php elseif ($k == 82):?>
-	
+
 		</section>
 <?php endif;?>
 <?php endforeach; endforeach;?>
