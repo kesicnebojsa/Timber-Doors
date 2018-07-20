@@ -516,13 +516,13 @@
 							</div>
 							<div id='pPlusInputDoorDet2'>
 								<p>Timber Type : </p>
-								<select class=' largeInputsHeight marginClassInputs' name="TimberType" id="doorColorTimber" value="">
-                                    <option value="volvo">Paint quality Pine</option>
-                                    <option value="saab">Paint quality Cedar</option>
-                                    <option value="mercedes">Stain quality Cedar</option>
-                                    <option value="audi">Paint quality Vulcan+</option>
-                                    <option value="mercedes">Rosewood</option>
-                                    <option value="audi">American White Ash</option>
+								<select class=' largeInputsHeight marginClassInputs' name="TimberType" id="doorColorTimber">
+                                    <option value="Paint quality Pine">Paint quality Pine</option>
+                                    <option value="Paint quality Cedar">Paint quality Cedar</option>
+                                    <option value="Stain quality Cedar">Stain quality Cedar</option>
+                                    <option value="Paint quality Vulcan+">Paint quality Vulcan+</option>
+                                    <option value="Rosewood">Rosewood</option>
+                                    <option value="American White Ash">American White Ash</option>
                                 </select>
 							</div>
 							<div id='pPlusInputDoorDet3'>
@@ -727,6 +727,14 @@
 						</div>
 						<div class='clear'></div>
 					</div><!-- fourthForm -->
+				</div>
+				<div id="TextAreaWrapper">
+					<div id="YourCommentBoxHead">
+						<h2>Comment Box</h2>
+					</div>
+					<div id="CommentBoxWrapper">
+						<textarea id="text_area" name="commentbox" placeholder="Leave a comment..."></textarea>
+					</div>				
 				</div>
 				<div id="fifthFormTimber">
 					<button id='submitButtonOrderTimber' name="SubmitOrder" type="submit"> Submit </button>

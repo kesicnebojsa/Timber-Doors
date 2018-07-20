@@ -44,12 +44,12 @@ ob_start(); ?>
 					<h2>Supplier Details</h2>
 				</div>
 				<div class="space">
-					<p>Name: <?php echo $Name ?></p>
-					<p>Contact: <?php echo $Contact ?></p>
-					<p>Order Number: <?php echo $OrderNumber ?></p>
-					<p>Date: <?php echo $Date ?></p>
-					<p>Date Required: <?php echo $DateRequired ?></p>
-					<p>Job Name: <?php echo $JobName ?></p>
+					<p>Name: <?= ($Name ?? ''); ?></p>
+					<p>Contact: <?= ($Contact ?? ''); ?></p>
+					<p>Order Number: <?= ($OrderNumber ?? ''); ?></p>
+					<p>Date: <?= ($Date ?? ''); ?></p>
+					<p>Date Required: <?= ($DateRequired ?? ''); ?></p>
+					<p>Job Name: <?= ($JobName ?? ''); ?></p>
 				</div>
 		    </div>
 				<div id="Warranty">
@@ -57,7 +57,7 @@ ob_start(); ?>
 					<h2>Warranty</h2>
 				</div>
 				<div class="space">
-					<p><?php echo $Warranty ?></p>
+					<p><?= ($Warranty ?? ''); ?></p>
 				</div>
 		    </div>
 		    <div id="DoorDetails">
@@ -65,17 +65,17 @@ ob_start(); ?>
 					<h2>Door Details</h2>
 				</div>
 				<div class="space">
-					<p>Door Code: <?php echo $DoorCode ?></p>
-					<p>Timber type: <?php echo $TimberType ?></p>
+					<p>Door Code: <?= ($DoorCode ?? '') ?></p>
+					<p>Timber type: <?php echo ($TimberType ?? '')  ?></p>
 					<p>Qty: <?php echo $Qty ?></p>
-					<p>Door Height: <?php echo $DoorHeight ?></p>
-					<p>Door Width: <?php echo $DoorWidth ?></p>
-					<p>Glass Type: <?php echo $GlassType ?></p>
-					<p>Glass on which side: <?php echo $GlassOn ?></p>
+					<p>Door Height: <?php echo ($DoorHeight ?? '') ?></p>
+					<p>Door Width: <?php echo ($DoorWidth ?? '') ?></p>
+					<p>Glass Type: <?php echo ($GlassType ?? '') ?></p>
+					<p>Glass on which side: <?php echo ($GlassOn ?? '') ?></p>
 					<p>Beading Door Viewer: <?php if(empty($DoorViewer)): echo 'NOT SELECTED'; else: echo 'SELECTED'; endif;?></p>
 					<p>Extra Protective Wrap $35: <?php if(empty($ProtectiveWrap)): echo 'NOT SELECTED'; else: echo 'SELECTED'; endif;?></p>
 					<p>Temporary Single Base Coat - Sikkens HLS Dark Oak $80: <?php if(empty($TempOak)): echo 'NOT SELECTED'; else: echo 'SELECTED'; endif;?></p>
-					<p><?php echo $HungOn ?></p>
+					<p><?php echo ($HungOn ?? '') ?></p>
 			   </div>
             </div>
             <div id="LockDetails">

@@ -1440,6 +1440,21 @@ section > div {
     color: #ffae00;
 }
 
+
+/* TEXT AREA TAB3 */
+
+#YourCommentBoxHead h2 {
+	margin-bottom: 5px;
+}
+
+textarea {
+	font-family: 'Yantramanav', sans-serif;
+	display: block;
+	width: 99%;
+	margin: 0px auto;
+	height: 100px;
+}
+
 @media (max-width:1850px) {
 	.mainWrapper1TimberDoors {
 		min-width: 610px;

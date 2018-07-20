@@ -6,13 +6,7 @@
   $username = 'stevan@stevancuk.com';      			//  set server email username for authentication
   $password = 'elf666priest';             		 	//  set server email password for authentication
   $mailfrom = 'stevan@stevancuk.com';       		//  set who the message appears to be sent from (part of mail headers)
-  $mailOrdersTo = 'ikactest@gmail.com';         	//  !!! this e-mail will receive ORDERS e.g. sales@parkwooddoors.co.nz
-
-
-
-
-
-
+  $mailOrdersTo = 'ikactest@gmail.com';         	//  !!! this e-mail will receive ORDERS e.g. orders@parkwooddoors.co.nz
 
 
 
@@ -89,7 +83,8 @@ $msg .= 'Door Width: ' . $V->h($_POST['Door_Width']) . '<br>';
 	$msg .= (isset($_POST['Extra_Color2']) && $_POST['Extra_Color']=='on') ? 'Signature Finish Kit: Selected <br>' : 'Signature Finish Kit: Not Selected <br>';
 
 else:
-	$msg = 'Comment box msg should be here!';
+	$msg = 'Comment box message:<br>';
+	$msg .= $CommentBox;
 endif;
 
 ######################################################################################################

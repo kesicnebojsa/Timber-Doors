@@ -735,14 +735,34 @@ function makeObjectForPDF() {
 	};
 }
 
+
+/*
+
+	>:(
+
+*/
+
+var selectTimber = $('#doorColorTimber').val();
+var textAreaComment = $('#text_area').val();
+
 // AJAX SUBMIT FORM TAB3
 $('#submitButtonOrderTimber').click(function(e){
 	e.preventDefault();
 	$('body').addClass('waitCursor');
 	makeObjectForPDF();
+
+/*	
+	>:(
+	
+*/
+	objectForPDF.TimberType = selectTimber;
+	objectForPDF.CommentBox = textAreaComment;
+
 	$.post( "PWPHP/processor.php", objectForPDF).done(function(result) {
 		$('body').removeClass('waitCursor');
-
+		//console.log(textAreaComment);
+		//console.log(selectTimber);
+        //console.log(result);
 		// Check inputs on php response
 
 		//Warranty
@@ -844,6 +864,7 @@ $('#submitButtonOrderTimber').click(function(e){
 		if(result.includes("Thank You!")) {
 			$('#emailWarningSecondPage13').css("display", "block");
 		}
+
 	});
 
 	// Resubmission incident - purify object for its potential volatility
