@@ -1,18 +1,11 @@
 <?php
-//			E-MAIL VARIABLES
-  $host = 'mail.stevancuk.com';              		//  set smtp server host
-  $port = 587;                           			//  set smtp server port (usually 465 for ssl, 587 for tls)
-  $SMTPAuth = true;                      			//  whether to use SMTP authentication, false otherwise
-  $username = 'stevan@stevancuk.com';      			//  set server email username for authentication
-  $password = 'elf666priest';             		 	//  set server email password for authentication
-  $mailfrom = 'stevan@stevancuk.com';       		//  set who the message appears to be sent from (part of mail headers)
-  $mailOrdersTo = 'ikactest@gmail.com';         	//  !!! this e-mail will receive ORDERS e.g. orders@parkwooddoors.co.nz
-
-
-
-
-
-
+$host = MAILHOST;
+$port = MAILPORT;
+$SMTPAuth = MAILAUTH;
+$username = MAILUSERNAME;
+$password = MAILPASSWORD;
+$mailfrom = MAILFROM;
+$mailOrdersTo = MAILORDERSTO;
 
 ############### SET EMAIL MSG ##############################
 
@@ -84,7 +77,7 @@ $msg .= 'Door Width: ' . $V->h($_POST['Door_Width']) . '<br>';
 
 else:
 	$msg = 'Comment box message:<br>';
-	$msg .= $CommentBox;
+	$msg .= h($CommentBox);
 endif;
 
 ######################################################################################################

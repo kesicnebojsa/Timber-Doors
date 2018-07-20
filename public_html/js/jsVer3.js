@@ -393,7 +393,7 @@ $('.inputLabelTimber input').on('input', function() {
 	//Email ajax - check as you type
 	$('#inputEmailTimber').on('input', function(){
 		if(tabOneValues.Email){
-			$.post( "PWPHP/processor.php", {EmailAsYouType : $('#inputEmailTimber').val()}).done(function(result) {
+			$.post( "pwphp/ajax.php", {EmailAsYouType : $('#inputEmailTimber').val()}).done(function(result) {
 				if (JSON.parse(result) === true){
 					$('#inputEmailTimber').css('border', '2px inset #eeeeee');
 				}else{
@@ -419,7 +419,7 @@ $('#sectionOneButtonTimber').on('click', function() {
 	doAllCalculations();
 	$.ajax({
     	type: 'POST',
-    	url: "PWPHP/processor.php",
+    	url: "pwphp/ajax.php",
         data: {Next, tabOneValues},
         success: function(result){
 
@@ -514,7 +514,7 @@ $('#mailButtonTimber').click(function(e){
 	$('body').addClass('waitCursor');
 	$.ajax({
 		type: 'POST',
-		url: "PWPHP/processor.php",
+		url: "pwphp/ajax.php",
 		data: emailObject,
 		success: function(result){
 			$('body').removeClass('waitCursor');
@@ -748,7 +748,7 @@ $('#submitButtonOrderTimber').click(function(e){
 	objectForPDF.TimberType = selectTimber;
 	objectForPDF.CommentBox = textAreaComment;
 
-	$.post( "PWPHP/processor.php", objectForPDF).done(function(result) {
+	$.post( "pwphp/ajax.php", objectForPDF).done(function(result) {
 		$('body').removeClass('waitCursor');
         //console.log(result);
 
@@ -903,7 +903,7 @@ $('#calcTab2Timber').click(function(){
 
 	$.ajax({
     	type: 'POST',
-    	url: "PWPHP/processor.php",
+    	url: "pwphp/ajax.php",
         data: {Next, tabOneValues},
         success: function(result){
 
@@ -969,7 +969,7 @@ $('#calcTab3Timber').click(function(){
 
 	$.ajax({
     	type: 'POST',
-    	url: "PWPHP/processor.php",
+    	url: "pwphp/ajax.php",
         data: {Next, tabOneValues},
         success: function(result){
 

@@ -1,14 +1,7 @@
 <?php
-define('DS', DIRECTORY_SEPARATOR);
-define('CLASSES', __DIR__ . '/class/');
-spl_autoload_register(function($class){
-	$ClassFileName = str_replace('\\', DS, $class) . '.php';
-	if(file_exists(CLASSES. $ClassFileName)){
-		require_once CLASSES . $ClassFileName;
-	}
-});
-require_once dirname(__FILE__) . '/includes/arrays.php';
-require_once dirname(__FILE__) . '/class/DoorModel.php';
+require_once '../../src/init.php';
+require_once INC . 'doors-array.php';
+
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 #################### TAB1 Check Email as you type ####################################################
@@ -90,8 +83,8 @@ elseif (isset($_POST['submitMail']) && ($_POST['submitMail']=='true') && (!isset
 	if (!empty($validate->GetErrors())):
 		die(json_encode($validate->GetErrors()));
 	else:
-		require_once dirname(__FILE__) . '/includes/PDFDoorModels/PDFDoorModels.php';
-		require_once dirname(__FILE__) . '/includes/EmailSettings.php';
+		require_once INC . 'pdf-door-models.php';
+		require_once INC . 'email-settings.php';
 	endif;
 
 	if (!$mail->send()):
@@ -142,8 +135,8 @@ elseif (isset($_POST['SubmitOrder']) && (!isset($_POST['submitMail']))):
 	if (!empty($validate->GetErrors())):
 		die(json_encode($validate->GetErrors()));
 	else:
-		require_once dirname(__FILE__) . '/includes/PDFOrder/PDFOrder.php';
-		require_once dirname(__FILE__) . '/includes/EmailSettings.php';
+		require_once INC . 'pdf-order.php';
+		require_once INC . 'email-settings.php';
 	endif;
 
 	if (!$mail->send()):
@@ -153,5 +146,5 @@ elseif (isset($_POST['SubmitOrder']) && (!isset($_POST['submitMail']))):
 		die(json_encode('Thank You!We will send an order confirmation within 2 working days!'));
 	endif;
 endif;
-header('Location:../index.php')
+goHome();
 ?>

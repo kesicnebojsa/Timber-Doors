@@ -1,32 +1,35 @@
+<?php
+require_once '../src/init.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
 <meta charset="utf-8" />
+<meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
 	<title>Timber Doors</title>
-	<link rel="stylesheet" href="css/cssVer3.css">
+	<link rel="stylesheet" href="<?= getAssetLink('cssVer*.css','css'); ?>">
 </head>
 <body>
-	<div id='mainWrapperTimber'>
+	<div id="mainWrapperTimber">
 		<div id="wrapperForBannerTimber">
 			<h1> Solid Timber price calculator </h1>
-			<div id='calcRow1Timber'>
-				<div id='calcTab1Timber' class='activeTabTimber navMenuTimber'>
+			<div id="calcRow1Timber">
+				<div id="calcTab1Timber" class="activeTabTimber navMenuTimber">
 					<p> User  </p>
 					<p> details </p>
 					<h5> 1 </h5>
 				</div>
-				<div id='calcTab2Timber' class='navMenuTimber'>
+				<div id="calcTab2Timber" class="navMenuTimber">
 					<p> Door </p>
 					<p> selection </p>
 					<h5> 2 </h5>
 				</div>
-				<div id='calcTab3Timber' class='navMenuTimber'>
+				<div id="calcTab3Timber" class="navMenuTimber">
 					<p> Order </p>
 					<p> sheet </p>
 					<h5> 3 </h5>
 				</div>
-				<div class='clear'></div>
+				<div class="clear"></div>
                 <div id="all_pages_warrenty_warning">
                     <a href="http://parkwooddoors.co.nz/brochures/door-warranties/"><p>All exterior timber doors must be placed in a weather protected situation to be covered by warranty.</p></a>
                 </div>
@@ -34,7 +37,7 @@
                     <a href="quotes@parkwooddoors.co.nz"><p>Contact us for all prices outside this tool. Email quotes@parkwooddoors.co.nz</p></a>
                 </div>
 			</div>
-			<section id='userDetailsPageTimber'>
+			<section id="userDetailsPageTimber">
 				<section id="logoWrapperTimber">
 					<div id="firstLogoTimber">
 						<img src="img/Logo.jpg" alt="logo">
@@ -43,32 +46,32 @@
 				<form id="detailsFormWrappertimber">
 					<div class="inputLabelTimber">
 						<label>Name:</label>
-						<input placeholder="" type="text" id='inputNameTimber' />
+						<input placeholder="" type="text" id="inputNameTimber" />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Address:</label>
-						<input placeholder="" type="text" id='inputAddressTimber' />
+						<input placeholder="" type="text" id="inputAddressTimber" />
 					</div>
 					<div class="inputLabelTimber">
 						<label></label>
-						<input type="text" id='inputAddress2Timber' />
+						<input type="text" id="inputAddress2Timber" />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Phone:</label>
-						<input placeholder="" type="text" id='inputPhoneTimber' />
+						<input placeholder="" type="text" id="inputPhoneTimber" />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Email:</label>
-						<input placeholder="" type="email" id='inputEmailTimber' />
+						<input placeholder="" type="email" id="inputEmailTimber" />
 					</div>
 					<div class="inputLabelTimber">
 						<label>Contact:</label>
 						<input type="text" id='inputContactTimber' />
 					</div>
 				</form>
-				<div class='clear'></div>
-				<button id='sectionOneButtonTimber' type="button">Next</button>
-				<div class='clear'></div>
+				<div class="clear"></div>
+				<button id="sectionOneButtonTimber" type="button">Next</button>
+				<div class="clear"></div>
 				<div id="h4SectionTimber">
 					<h4> Parkwood Doors </h4>
 					<h4> PO Box 672, Wanganui 4540, New Zealand </h4>
@@ -79,7 +82,7 @@
 				</div>
 			</section>
 		</div>
-        <div class='clear'></div>
+        <div class="clear"></div>
         <section id="all_codes_main">
         	<!-- <h1><button id="showHideDoorCodes">Click here to see all door codes</button></h1> -->
         	<div id="all_codes_all_codes">
@@ -337,11 +340,11 @@
         	</div>
         </section>
 		<section>
-			<form id='formShareMailTimber' class='formWrapperDisplayNone'>
-				<div id='calcInputsDivTimber'>
-					<div id='absoluteTriangleDiv'>
+			<form id="formShareMailTimber" class="formWrapperDisplayNone">
+				<div id="calcInputsDivTimber">
+					<div id="absoluteTriangleDiv">
 					</div>
-					<div id='supplierDataDivTimber' class='borderedTimber'>
+					<div id="supplierDataDivTimber" class='borderedTimber'>
 						<h3> SUPPLIER </h3>
 						<h5> <span class='suppSpanLeftTimber'>  Name:    </span> <span id='suppSpanNameTimber'></span> </h5>
 						<h5> <span class='suppSpanLeftTimber'>  Address: </span> <span id='suppSpanAddressTimber' ></span> </h5>
@@ -363,12 +366,12 @@
 					<div class='borderedTimber'>
 						<h3>PAIRS</h3>
 						<select id="singleTimber">
-							<option name='singleTimber' value="single">Single</option>
-							<option name='singleTimber' value="rebate">Rebated pair</option>
-							<option name='singleTimber' value="pair" title='Pair, supplied with pair of doors kit: rebated, rebate kit &amp; flushbolts fitted'>Rebated pair with pair-of-doors Kit </option>
+							<option name="singleTimber" value="single">Single</option>
+							<option name="singleTimber" value="rebate">Rebated pair</option>
+							<option name="singleTimber" value="pair" title="Pair, supplied with pair of doors kit: rebated, rebate kit &amp; flushbolts fitted">Rebated pair with pair-of-doors Kit </option>
 						</select>
 					</div>
-					<div class='borderedTimber'>
+					<div class="borderedTimber">
 						<h3>DRILLING</h3>
 						<select id="drillingTimber">
 							<option name='drillingTimber' value="noLocks">No Locks</option>
@@ -386,16 +389,16 @@
 								</div>
 							</div>
 						<select id="glassTimber">
-							<option name='glassTimber' value="noGlass">No Glass</option>
-							<option name='glassTimber' value="clearGlass">Clear or Tinted</option>
-							<option name='glassTimber' value="obscure">Obscure</option>
-							<option name='glassTimber' value="translucent">Translucent Laminate</option>
-							<option name='glassTimber' value="etchlite">Etchlite (Opal)</option>
-							<option name='glassTimber' value="doubleClear">Double Glazed Clear or Tinted</option>
-							<option name='glassTimber' value="doubleObscure">Double Glazed Obscure</option>
-							<option name='glassTimber' value="doubleTranslucent">Double Glazed Translucent Laminate</option>
-							<option name='glassTimber' value="doubleEtchlite">Double Glazed Etchlite (or Opal)</option>
-							<option name='glassTimber' value="doubleGlazing">Beaded For Double Glazing</option>
+							<option name="glassTimber" value="noGlass">No Glass</option>
+							<option name="glassTimber" value="clearGlass">Clear or Tinted</option>
+							<option name="glassTimber" value="obscure">Obscure</option>
+							<option name="glassTimber" value="translucent">Translucent Laminate</option>
+							<option name="glassTimber" value="etchlite">Etchlite (Opal)</option>
+							<option name="glassTimber" value="doubleClear">Double Glazed Clear or Tinted</option>
+							<option name="glassTimber" value="doubleObscure">Double Glazed Obscure</option>
+							<option name="glassTimber" value="doubleTranslucent">Double Glazed Translucent Laminate</option>
+							<option name="glassTimber" value="doubleEtchlite">Double Glazed Etchlite (or Opal)</option>
+							<option name="glassTimber" value="doubleGlazing">Beaded For Double Glazing</option>
 						</select>
 					</div>
 					<div class='borderedTimber'>
@@ -768,8 +771,7 @@
 		<h1 id="entrance_door_models_title"> ENTRANCE DOORS </h1>
 
 <?php
-require_once dirname(__FILE__) . '/PWPHP/includes/arrays.php';
-require_once dirname(__FILE__) . '/PWPHP/class/DoorModel.php';
+require_once INC . 'doors-array.php';
 foreach ($doors as $k => $v): ?>
 	<?php if ($k === 64): ?>
 		<h1 id="internal_door_models_title"> INTERNAL DOORS </h1>
@@ -882,7 +884,7 @@ foreach ($doors as $k => $v): ?>
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/prices.js"></script>
-<script src="js/jsVer3.js"></script>
+<script src="<?= getAssetLink('prices*.js','js'); ?>"></script>
+<script src="<?= getAssetLink('js*.js','js'); ?>"></script>
 </body>
 </html>
