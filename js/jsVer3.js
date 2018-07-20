@@ -65,7 +65,7 @@ function changeAllPrices() {
 		  		if ( (DOORWIDTH > 1200) || ( ((doorType !='PQC') && (doorType !='SQC') && (doorType !='PQV')) && (DOORWIDTH > 1000) ) ) {
 			  		$(id).text('N/A');
 			  		emailObject[key] = 'N/A';
-			  		return;		  			
+			  		return;
 		  		}else{
 		  			extra40PercForWidth = true;
 		  		}
@@ -78,7 +78,7 @@ function changeAllPrices() {
 		  		if ( (DOORHEIGHT > 2600) || ( ((doorType !='PQC') && (doorType !='SQC') && (doorType !='PQV')) && (DOORHEIGHT > 2400) ) ) {
 			  		$(id).text('N/A');
 			  		emailObject[key] = 'N/A';
-			  		return;		  			
+			  		return;
 		  		}else{
 		  			extra40PercForHeight = true;
 		  		}
@@ -93,7 +93,7 @@ function changeAllPrices() {
 		  			// if there is extra 40% added, that 40% is added to price of 2400 height
 		  			price = price / 1980 * 2400;
 		  		}else{
-			  		price = price / 1980 * DOORHEIGHT;		  			
+			  		price = price / 1980 * DOORHEIGHT;
 		  		}
 		  	}
 		  	if (DOORWIDTH > 860) {
@@ -421,7 +421,7 @@ $('#sectionOneButtonTimber').on('click', function() {
     	type: 'POST',
     	url: "PWPHP/processor.php",
         data: {Next, tabOneValues},
-        success: function(result){			
+        success: function(result){
 
 			//Check required inputs on php response
 
@@ -477,8 +477,8 @@ $('#sectionOneButtonTimber').on('click', function() {
 			$('#userDetailsPageTimber').addClass('formWrapperDisplayNone');
 			$('#formShareMailTimber, #allModelsWrapper').removeClass('formWrapperDisplayNone');
 			$('#formWrapperTimber').addClass('formWrapperDisplayNone');
-			
-			$('#all_codes_main').css('display', 'block');	
+
+			$('#all_codes_main').css('display', 'block');
 		},
         error: function(xhr,status,error){
         	console.log(xhr);
@@ -735,34 +735,23 @@ function makeObjectForPDF() {
 	};
 }
 
-
-/*
-
-	>:(
-
-*/
-
-var selectTimber = $('#doorColorTimber').val();
-var textAreaComment = $('#text_area').val();
-
 // AJAX SUBMIT FORM TAB3
 $('#submitButtonOrderTimber').click(function(e){
+
 	e.preventDefault();
 	$('body').addClass('waitCursor');
 	makeObjectForPDF();
 
-/*	
-	>:(
-	
-*/
+	var selectTimber = $('#doorColorTimber').val();
+	var textAreaComment = $('#text_area').val();
+
 	objectForPDF.TimberType = selectTimber;
 	objectForPDF.CommentBox = textAreaComment;
 
 	$.post( "PWPHP/processor.php", objectForPDF).done(function(result) {
 		$('body').removeClass('waitCursor');
-		//console.log(textAreaComment);
-		//console.log(selectTimber);
         //console.log(result);
+
 		// Check inputs on php response
 
 		//Warranty
@@ -904,7 +893,7 @@ $('#calcTab1Timber').click(function(){
 	$('#userDetailsPageTimber').removeClass('formWrapperDisplayNone');
 	$('#formShareMailTimber, #allModelsWrapper').addClass('formWrapperDisplayNone');
 	$('#formWrapperTimber').addClass('formWrapperDisplayNone');
-	
+
 	$('#all_codes_main').css('display', 'none');
 });
 $('#calcTab2Timber').click(function(){
