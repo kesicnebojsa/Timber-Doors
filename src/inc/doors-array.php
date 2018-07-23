@@ -17,11 +17,24 @@ $doors = [1=>
 
 ['FIG5A'=>'FIG 5A'],['FIG5'=>'FIG5'],['BRACE'=>'BRACED & LEDGED'],['VIL2'=>'VILLA 2'],['VIL4'=>'VILLA 4'],['BUN2'=>'BUNGALOW 2'],['BUN3'=>'BUNGALOW 3'],['BUN4'=>'BUNGALOW 4'],
 
-['TRA2'=>'TRADITIONAL 2'],['TRA4'=>'TRADITIONAL 4'],['TRA4 O/T'=>'TRADITIONAL 4 O/T'],['VIC2'=>'VICTORIAN 2'],['PIO2'=>'PIONEER 2'],['PIO4'=>'PIONEER 4'],['PIO4 O/T'=>'PIONEER 4 O/T'],['IP1'=>'IP1'],
+['TRA2'=>'TRADITIONAL 2'],['TRA4'=>'TRADITIONAL 4'],['TRA4 O/T'=>'TRADITIONAL 4 O/T'],['VIC2'=>'VICTORIAN 2'],['PIO2'=>'PIONEER 2'],['PIO4'=>'PIONEER 4'],['PIO4 O/T'=>'PIONEER 4 O/T']];/*,['IP1'=>'IP1'],
 
 ['IP6'=>'IP6'],['IP12'=>'IP12'],['ROS'=>'ROSEVILLE'],['I1L'=>'Int. 1 LITE'],['I2L'=>'Int. 2 LITE'],['I3L'=>'Int. 3 LITE'],['I4L'=>'Int. 4 LITE'],['IF6'=>'IF6'],
 
 ['IF8'=>'IF8'],['IF9'=>'IF9'],['IF10'=>'IF10'],['IF3'=>'IF3'],['AR41'=>'AR41'],['AR42'=>'AR42'],['AR43'=>'AR43'],['AR44'=>'AR44 (interior)'],
 
-['AR61'=>'AR61'],['AR63'=>'AR63']];
+['AR61'=>'AR61'],['AR63'=>'AR63']]; */
+
+
+$doorsInternal = [1=>
+['IP1'=>'IP1'], ['IP6'=>'IP6'],
+['IP12'=>'IP12'],['ROS'=>'ROSEVILLE'],
+['I1L'=>'Int. 1 LITE'],['I2L'=>'Int. 2 LITE'],
+['I3L'=>'Int. 3 LITE'],['I4L'=>'Int. 4 LITE'],
+['IF6'=>'IF6'],['IF8'=>'IF8'],
+['IF9'=>'IF9'],['IF10'=>'IF10'],
+['IF3'=>'IF3'],['AR41'=>'AR41'],
+['AR42'=>'AR42'],['AR43'=>'AR43'],
+['AR44'=>'AR44 (interior)'],['AR61'=>'AR61'],
+['AR63'=>'AR63']];
 ?>

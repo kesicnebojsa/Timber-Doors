@@ -777,9 +777,7 @@ require_once '../src/init.php';
 <?php
 require_once INC . 'doors-array.php';
 foreach ($doors as $k => $v): ?>
-	<?php if ($k === 64): ?>
-		<h1 id="internal_door_models_title"> INTERNAL DOORS </h1>
-	<?php endif; ?>
+
 	<?php
 	foreach ($v as $dc => $dm):
 		$d = new DoorModel($dc);
@@ -876,12 +874,115 @@ foreach ($doors as $k => $v): ?>
 	            <div class='clear'></div>
 		</section>
 		<section>
-<?php elseif ($k == 82):?>
-
-		</section>
-<?php endif;?>
+<?php endif; ?>		
+	
 <?php endforeach; endforeach;?>
 		<div class='clear'></div>
+		</section>
+		<h1 id="internal_door_models_title"> INTERNAL DOORS </h1>
+		<section>
+<?php foreach ($doorsInternal as $k => $v): ?>
+
+	<?php
+	foreach ($v as $dc => $dm):
+		$d = new DoorModel($dc);
+        $idNoSpace = str_replace([' ','&','/','(',')','.'], '', $dm); ?>
+			<div class='mainWrapper1TimberDoors' id='<?php o($idNoSpace);?>'>
+				<div class='codeTimberDoorsH2'>
+					<h2><?php o($dm);?></h2>
+					<div class='clear'></div>
+				</div>
+				<div class='clear'></div>
+				<div class='imgMainDiv'>
+					<img src='img/<?php o($d->img);?>.jpg'>
+				</div>
+				<div class='priceMain'>
+					<div class='priceMainGrayHeadline'>
+						<div class='headlineGray'>
+							<div class='headlineGray1'>
+								<h3>Code</h3>
+							</div>
+							<div class='headlineGray2'>
+								<h3>Available timbers</h3>
+							</div>
+							<div class='headlineGray3'>
+								<h3>Price</h3>
+							</div>
+						</div>
+					</div>
+					<div class='twoLeftDivs'>
+						<div class='doorCode'>
+							<div id='code1_<?php o($d->replace);?>'>
+								<h2><?php o($d->dc1);?></h2>
+							</div>
+							<div id='code2_<?php o($d->replace);?>'>
+								<h2><?php o($d->dc2);?></h2>
+							</div>
+							<div id='code3_<?php o($d->replace);?>'>
+								<h2><?php o($d->dc3);?></h2>
+							</div>
+							<div id='code4_<?php o($d->replace);?>'>
+								<h2><?php o($d->dc4);?></h2>
+							</div>
+							<div id='code5_<?php o($d->replace);?>'>
+								<h2><?php o($d->dc5);?></h2>
+							</div>
+							<div id='code6_<?php o($d->replace);?>'>
+								<h2><?php o($d->dc6);?></h2>
+							</div>
+						</div>
+						<div class='availebleTimbers'>
+							<div class='avTimber1'>
+								<h2><?php o($d->m1);?></h2>
+							</div>
+							<div class='avTimber2'>
+								<h2><?php o($d->m2);?></h2>
+							</div>
+							<div class='avTimber3'>
+								<h2><?php o($d->m3);?></h2>
+							</div>
+							<div class='avTimber4'>
+								<h2><?php o($d->m4);?></h2>
+							</div>
+							<div class='avTimber5'>
+								<h2><?php o($d->m5);?></h2>
+							</div>
+							<div class='avTimber6'>
+								<h2><?php o($d->m6);?></h2>
+							</div>
+						</div>
+					</div>
+					<div class='oneRightDiv'>
+						<div id='price1_<?php o($d->replace);?>'>
+							<h2>N/A</h2>
+						</div>
+						<div id='price2_<?php o($d->replace);?>'>
+							<h2>N/A</h2>
+						</div>
+						<div id='price3_<?php o($d->replace);?>'>
+							<h2>N/A</h2>
+						</div>
+						<div id='price4_<?php o($d->replace);?>'>
+							<h2><?php o($d->p);?></h2>
+						</div>
+						<div id='price5_<?php o($d->replace);?>'>
+							<h2><?php o($d->p);?></h2>
+						</div>
+						<div id='price6_<?php o($d->replace);?>'>
+							<h2><?php o($d->p);?></h2>
+						</div>
+					</div>
+				</div>
+				<div class='clear'></div>
+			</div>		
+<?php if (($k % 2 == 0) and ($k != 82)):?>
+	            <div class='clear'></div>
+		</section>
+		<section>
+<?php endif; ?>		
+	
+<?php endforeach; endforeach;?>
+		<div class='clear'></div>	
 	</div><!-- allModelsWrapper -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
