@@ -1,8 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
 
 html, body, div, span, applet, object, iframe,
@@ -14,8 +14,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -26,9 +26,12 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+html {
+    font-family: 'Nanum Gothic', sans-serif;
 }
 body {
 	line-height: 1;
@@ -59,6 +62,11 @@ form {
 section {
     width: 1800px;
 }
+#allModelsWrapper > section {
+    width: 1220px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
 .clear {
     clear: both;
     float: none;
@@ -71,6 +79,9 @@ input {
     width: 200px;
     border-radius: 5px;
 }
+h2 {
+    font-size: 16px;
+}
 h4 {
     font-size: 16px;
     margin: 4px 0px;
@@ -78,12 +89,171 @@ h4 {
 b {
     font-weight: 600;
 }
-
+.waitCursor {
+    cursor: wait;
+}
 /*  TAB SECTION */
 
 
 .formWrapperDisplayNone {
 	display: none;
+}
+#emailWarningSecondPage1 {
+    position: fixed;
+    background-color: white;
+    top: 350px;
+    left:40%;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 100px;
+    font-size: 30px;
+    color: #1298e5;
+    border: 3px solid #1298e5;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+#emailWarningSecondPage2 {
+    position: fixed;
+     background-color: white;
+    left:40%;
+    top: 350px;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 100px;
+    font-size: 30px;
+    color: red;
+    border: 3px solid #1298e5;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+#emailWarningRelative1 {
+    position: relative;
+}
+#emailWarningAbsolute1 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 275px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+#emailWarningAbsolute1:hover  {
+    cursor: pointer;
+}
+#emailWarningAbsolute1 img {
+    width: 100%;
+    height: auto;
+    display: table-cell;
+    z-index: 5;
+}
+#emailWarningRelative2 {
+    position: relative;
+}
+#emailWarningAbsolute2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 275px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 5;
+}
+#emailWarningAbsolute2:hover  {
+    cursor: pointer;
+}
+#emailWarningAbsolute2 img {
+    width: 100%;
+    height: auto;
+    display: table-cell;
+    z-index: 5;
+}
+#emailWarningSecondPage13 {
+    position: fixed;
+    background-color: white;
+    top: 350px;
+    left:40%;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 100px;
+    font-size: 30px;
+    color: #1298e5;
+    border: 3px solid #1298e5;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+#emailWarningSecondPage23 {
+    position: fixed;
+    background-color: white;
+    left:40%;
+    top: 350px;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 100px;
+    font-size: 30px;
+    color: red;
+    border: 3px solid #1298e5;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+#emailWarningRelative13 {
+    position: relative;
+}
+#emailWarningAbsolute13 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 275px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+#emailWarningAbsolute13:hover  {
+    cursor: pointer;
+}
+#emailWarningAbsolute13 img {
+    width: 100%;
+    height: auto;
+    display: table-cell;
+    z-index: 5;
+}
+#emailWarningRelative23 {
+    position: relative;
+}
+#emailWarningAbsolute23 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 275px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 5;
+}
+#emailWarningAbsolute23:hover  {
+    cursor: pointer;
+}
+#emailWarningAbsolute23 img {
+    width: 100%;
+    height: auto;
+    display: table-cell;
+    z-index: 5;
+}
+#formWrapperTimber #emailWarningSecondPage13 h2,#formWrapperTimber #emailWarningSecondPage23 h2 {
+    margin: 0px;
 }
 #mainWrapperTimber {
     width: 80%;
@@ -105,7 +275,7 @@ b {
     color: rgba(255, 255, 255, 0.8);
     font-size: 26px;
     margin: 20px 0px 20px 0px;
-    
+
 }
 #mainWrapperTimber #formWrapperTimber  {
    line-height: 22px;
@@ -114,18 +284,21 @@ b {
     height: 22px;
 }
 #mainWrapperTimber #calcRow1Timber > div.activeTabTimber {
-    background-color: #92969b;
+    background-color: #4f4f4f;
 }
 #calcRow1Timber > div.navMenuTimber {
     float: left;
     width: 180px;
     height: 111px;
-    background-color: #696c70;
+    background-color: #000;
     border: 1px solid #7d8289;
     box-shadow: 0px 5px 10px #7d8289;
     display: block;
     align-items: center;
     border-radius: 10px;
+}
+#calcRow1Timber > div.navMenuTimber:hover {
+    background-color: #c4c8ce;
 }
 #calcRow1Timber {
     margin: 0 auto;
@@ -137,7 +310,7 @@ b {
     font-size: 22px;
     font-weight: 800;
     width: 100%;
-    color: #DD8D00;
+    color: #ffffff;
 }
 #calcRow1Timber > div > p:nth-child(2) {
     margin: 0px 3px 16px 0px;
@@ -145,6 +318,7 @@ b {
 #calcRow1Timber > div > h5 {
     text-align: center;
     font-weight: 600;
+    color: #ffffff;
 }
 #userDetailsPageTimber {
     /* display: none; */
@@ -478,6 +652,7 @@ b {
 #mainGraphDiv1Timber {
    float: left;
    margin: 20px 0px;
+   position: relative;
 }
 #rebatedFirstChekTimber {
     float: left;
@@ -489,7 +664,7 @@ b {
     width: 300px;
     height: 80px;
     margin-right: 70px;
-}   
+}
 #divForFistGraphTimber {
     float: left;
     margin: 7px 0px 0px 10px;
@@ -501,6 +676,7 @@ b {
 #mainGraphDiv2Timber {
     float: left;
     margin: 20px 0px;
+    position: relative;
 }
 #fourthFormTimber input {
     width: 60px;
@@ -512,6 +688,11 @@ b {
     border: 2px solid black;
     float: left;
     margin-top: 7px;
+}
+.outsideWord {
+    position: absolute;
+    left: 160px;
+    top: 30px;
 }
 #firstGraphDivTimber {
     width: 10px;
@@ -621,11 +802,11 @@ b {
     height: 0px;
 }
 .mainWrapper1TimberDoors {
-    width: 750px;
-    height:500px; 
+    width: 550px;
+    height:500px;
     background-color: white;
     margin:50px 20px 50px 20px;
-    font-family: 'Roboto', sans-serif;
+   font-family: 'Nanum Gothic', sans-serif;
 }
 .codeTimberDoorsH2, #codeTimberDoorsEntrence, #codeTimberDoorsEntrence52 {
     width: 300px;
@@ -639,7 +820,7 @@ b {
     text-align: center;
     float: left;
     width: 165px;
-    background-color: green; 
+    background-color: green;
 }
 
 img {
@@ -655,23 +836,23 @@ img {
 }
 .priceMainGrayHeadline {
     height: 40px;
-    width: 530px;
+    width: 350px;
     background-color: #969a9e;
     color: #ffffff;
     border-radius: 10px 10px 0px 10px;
 }
 .headlineGray1,.headlineGray1Entrence,.headlineGray1Entrence52 {
-    width: 120px;
+    width: 80px;
     line-height: 40px;
     text-align: center;
     float: left;
     font-size: 18px;
 }
 .headlineGray2,.headlineGray2Entrence,.headlineGray2Entrence52 {
-    width: 230px;
+    width: 170px;
     line-height: 40px;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 20px;
     float: left;
     font-size: 18px;
 }
@@ -685,7 +866,7 @@ img {
 .twoLeftDivs {
     float: left;
     background-color: white;
-    width: 450px;
+    width: 270px;
     color: black;
 }
 .doorCode > div {
@@ -694,14 +875,17 @@ img {
 }
 .doorCode  {
     float: left;
-    width: 120px;
+    width: 80px;
     text-align: center;
-} 
+}
+.doorCode h2 {
+    font-size: 14px;
+}
 .availebleTimbers {
     float: left;
-    width: 230px;
+    width: 170px;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 20px;
 }
 .availebleTimbers > div {
@@ -738,17 +922,65 @@ section > div {
 }
 #divForFloatDoorOpenTimber #idClassClear2 {
     display: none;
-}  
-
+}
+#mainWrapperTimber #all_codes_main .inlineClass {
+    display: inline-block;
+    width: 120px;
+    /*height: 30px;*/
+    text-align: center;
+    font-size: 12px;
+    float: none;
+    line-height: 20px;
+}
+#mainWrapperTimber #all_codes_main .inlineClass:hover {
+    cursor: pointer;
+    background-color:#706f6f;
+    color: #fff;
+}
+#all_codes_main {
+    display: none;
+    position: fixed;
+    width: 382px;
+    top: 180px;
+    left: 1px;
+    background-color: white;
+    color:black;
+    text-align: center;
+    font-size: 18px;
+    padding: 0px;
+}
+#all_codes_main h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#all_codes_main h1:hover {
+    cursor: pointer;
+}
+#all_codes_all_codes {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 380px;
+    /*display: none;*/
+}
+#all_codes_all_codes h3 {
+    text-align: left;
+    padding: 10px;
+    background-color: #ededed;
+    font-weight: 600;
+}
+#all_codes_all_codes h4 {
+    font-size: 12px;
+    margin: 1px 0px;
+}
 /*  entrence timber doors */
 
 
 /*#mainWrapperEntrance {
     width: 1010px;
-    height:500px; 
+    height:500px;
     background-color: white;
     margin:50px 20px 50px 250px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 .priceMainGrayHeadlineEntrence {
     height: 40px;
@@ -795,7 +1027,7 @@ section > div {
 }
 #emptyRightDivEntrence {
     float: left;
-    height:360px; 
+    height:360px;
     width:120px;
     text-align: center;
 }
@@ -815,7 +1047,7 @@ section > div {
     border-radius: 10px;
     border-radius: 10px;
     margin-left: 10px;
-} 
+}
 .twoLeftDivsEntrence {
     float: left;
     background-color: white;
@@ -848,7 +1080,7 @@ section > div {
     background-color: #969a9e;
     text-align: center;
     line-height: 40px;
-    font-size: 20px; 
+    font-size: 20px;
 }*/
 
 
@@ -858,10 +1090,10 @@ section > div {
 
 /*#mainWrapperEntrance52 {
     width: 1010px;
-    height:500px; 
+    height:500px;
     background-color: white;
     margin:50px 20px 50px 250px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 #codeH552 {
     height: 25px;
@@ -920,7 +1152,7 @@ section > div {
 }
 #emptyRightDivEntrence52 {
     float: left;
-    height:360px; 
+    height:360px;
     width:120px;
     text-align: center;
 }
@@ -931,7 +1163,7 @@ section > div {
     background-color: #d3cdcb;
     border-radius: 10px;
     border-radius: 10px;
-} 
+}
 .twoLeftDivsEntrence52 {
     float: left;
     background-color: white;
@@ -959,7 +1191,7 @@ section > div {
     background-color: #969a9e;
     text-align: center;
     line-height: 40px;
-    font-size: 20px; 
+    font-size: 20px;
 }*/
 /* frame */
 #formWrapperTimber #headLineOrderTimber {
@@ -969,7 +1201,7 @@ section > div {
 }
 /*#mainWrapperEntranceFrame {
     width: 600px;
-    height:750px; 
+    height:750px;
     background-color: white;
     margin:50px 20px 50px 500px;
     font-family: 'Roboto', sans-serif;
@@ -1102,7 +1334,11 @@ section > div {
     padding-right: 5px;
     padding-left: 5px;
     background-color:#6d665d;
-	color:#ff9000; 
+	color:#ff9000;
+}
+#formShareMailTimber #glassH3andPDiv  span:hover {
+    background-color:#00296b;
+    cursor: pointer;
 }
 #paragraphDivGlassCalcRelative {
 	position: relative;
@@ -1114,7 +1350,8 @@ section > div {
 	right: 0px;
 	z-index: 1;
 	background-color:#6d665d;
-	color:#ff9000;  
+	color:#ff9000;
+    padding: 10px;
 }
 .inputHeightWidthTimber label {
 	display: inline-block;
@@ -1166,6 +1403,73 @@ section > div {
 #secondFormTimber #heightInputTimber #h3IdSpan {
     font-size: 14px;
 }
+#all_pages_warrenty_warning {
+   font-size: 20px;
+   margin-top: 10px;
+   padding-bottom: 5px;
+   background-color: #4f4f4f;
+   padding-top: 5px;
+}
+#all_pages_warrenty_warning:hover {
+    cursor: pointer;
+}
+#all_pages_warrenty_warning span {
+}
+#all_pages_warrenty_warning a {
+    text-decoration: none;
+    font-style: italic;
+    color:#ffee00;
+    font-weight: 600;
+    display: block;
+}
+#all_pages_warrenty_warning1 {
+    font-size: 20px;
+    margin-top: 10px;
+   padding-bottom: 5px;
+   background-color: #4f4f4f;
+   padding-top: 5px;
+}
+#all_pages_warrenty_warning1:hover {
+    cursor: pointer;
+}
+#all_pages_warrenty_warning1 span {
+}
+#all_pages_warrenty_warning1 a {
+    text-decoration: none;
+    font-style: italic;
+    display: block;
+    color:#ffee00;
+    font-weight: 600;
+}
+
+
+#entrance_door_models_title {
+    text-align: center;
+    font-size: 28px;
+    color: #ffae00;
+}
+
+#internal_door_models_title {
+    text-align: center;
+    font-size: 28px;
+    color: #ffae00;
+}
+
+
+/* TEXT AREA TAB3 */
+
+#YourCommentBoxHead h2 {
+	margin-bottom: 5px;
+}
+
+textarea {
+	font-family: 'Yantramanav', sans-serif;
+	display: block;
+	width: 99%;
+	margin: 0px auto;
+	height: 100px;
+}
+
 @media (max-width:1850px) {
 	.mainWrapper1TimberDoors {
 		min-width: 610px;
@@ -1179,7 +1483,7 @@ section > div {
     .headlineGray2 {
         margin-left: 30px;
         width:200px;
-        font-size:16px;  
+        font-size:16px;
     }
     .availebleTimbers {
         margin-left: 30px;
@@ -1193,7 +1497,7 @@ section > div {
         margin-right: 20%;
     }
     #logoWrapperTimber {
-        margin-left: 45%;    
+        margin-left: 45%;
     }
     #h4SectionTimber {
         margin-right: 20%;
@@ -1216,7 +1520,7 @@ section > div {
     .headlineGray2 {
         margin-left: 0px;
         width:170px;
-        font-size:16px;  
+        font-size:16px;
     }
     .availebleTimbers {
         margin-left: 0px;
@@ -1230,7 +1534,7 @@ section > div {
         margin-right: 20%;
     }
     #logoWrapperTimber {
-        margin-left: 45%;    
+        margin-left: 45%;
     }
     #h4SectionTimber {
         margin-right: 20%;
@@ -1253,12 +1557,12 @@ section > div {
     .headlineGray2 {
         margin-left: 0px;
         width:170px;
-        font-size:16px;  
+        font-size:16px;
     }
     .availebleTimbers {
         margin-left: 0px;
         width: 170px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .priceMainGrayHeadline {
         width: 380px;
@@ -1267,7 +1571,7 @@ section > div {
         margin-right: 18%;
     }
     #logoWrapperTimber {
-        margin-left: 48%;    
+        margin-left: 48%;
     }
     #h4SectionTimber {
         margin-right: 18%;
@@ -1292,7 +1596,7 @@ section > div {
     .headlineGray2 {
         margin-left: 50px;
         width:230px;
-        font-size:18px;  
+        font-size:18px;
     }
     .availebleTimbers {
         margin-left: 50px;
@@ -1306,7 +1610,7 @@ section > div {
         margin-right: 17%;
     }
     #logoWrapperTimber {
-        margin-left: 50%;    
+        margin-left: 50%;
     }
     #h4SectionTimber {
         margin-right: 17%;
@@ -1327,7 +1631,7 @@ section > div {
         margin-right: 15%;
     }
     #logoWrapperTimber {
-        margin-left: 51%;    
+        margin-left: 51%;
     }
     #h4SectionTimber {
         margin-right: 15%;
@@ -1345,7 +1649,7 @@ section > div {
         margin-right: 14%;
     }
     #logoWrapperTimber {
-        margin-left: 53%;    
+        margin-left: 53%;
     }
     #h4SectionTimber {
         margin-right: 14%;
@@ -1359,11 +1663,11 @@ section > div {
     }
     #firstFormTimber {
         width: 80%;
-        margin-left:8%; 
+        margin-left:8%;
     }
     #warrantyChekboxsesTimber {
         width:80%;
-        margin-left:8%; 	
+        margin-left:8%;
     }
     #doorDetailsWrapperTimber {
         width:80%;
@@ -1436,7 +1740,7 @@ section > div {
         margin-right: 13%;
     }
     #logoWrapperTimber {
-        margin-left: 54%;    
+        margin-left: 54%;
     }
     #h4SectionTimber {
         margin-right: 13%;
@@ -1451,13 +1755,13 @@ section > div {
         margin-left:6%;
     }
     #firstFormTimber,#warrantyChekboxsesTimber,#secondFormTimber,#secondFormTimber,#doorDetailsWrapperTimber,#thirdFormTimber,#fourthFormTimber,#logoDivTimber,#faxOrdersAndEmailTimber,#fifthFormTimber {
-        margin-left:4%; 
+        margin-left:4%;
     }
     #detailsFormWrappertimber {
         margin-right: 10%;
     }
     #logoWrapperTimber {
-        margin-left: 56%;    
+        margin-left: 56%;
     }
     #h4SectionTimber {
         margin-right: 10%;
@@ -1468,7 +1772,7 @@ section > div {
 }
 @media (max-width:1200px) {
 	 #firstFormTimber,#warrantyChekboxsesTimber,#secondFormTimber,#secondFormTimber,#doorDetailsWrapperTimber,#thirdFormTimber,#fourthFormTimber,#logoDivTimber,#faxOrdersAndEmailTimber,#fifthFormTimber {
-        margin-left:1%; 
+        margin-left:1%;
     }
     #firstFormTimber,#warrantyChekboxsesTimber,#secondFormTimber,#secondFormTimber,#doorDetailsWrapperTimber,#thirdFormTimber,#fourthFormTimber,#faxOrdersAndEmailTimber,#fifthFormTimber {
         width: 75%;
@@ -1477,13 +1781,13 @@ section > div {
     	width: 10%;
     }
     #warrantyChekboxsesTimber p {
-        font-size: 14px; 
+        font-size: 14px;
     }
     #detailsFormWrappertimber {
         margin-right: 8%;
     }
     #logoWrapperTimber {
-        margin-left: 58%;    
+        margin-left: 58%;
     }
     #h4SectionTimber {
         margin-right: 8%;
@@ -1502,7 +1806,7 @@ section > div {
     }
     #warrantyChekboxsesTimber input {
         width:10%;
-        margin-left: 20px; 
+        margin-left: 20px;
     }
     #rightChekWarrTimber {
     	margin-right: 20px;
@@ -1514,7 +1818,7 @@ section > div {
         margin-right: 6%;
     }
     #logoWrapperTimber {
-        margin-left: 60%;    
+        margin-left: 60%;
     }
     #h4SectionTimber {
         margin-right: 6%;
@@ -1534,13 +1838,13 @@ section > div {
 	    height: 100px;
 	    box-shadow:none;
     }
-    #wrapperForBannerTimber #calcRow1Timber > div > p {	
+    #wrapperForBannerTimber #calcRow1Timber > div > p {
 	    margin:30px 0px 0px 0px;
-	    font-size: 32px;   
+	    font-size: 32px;
 	    display: inline-block;
 	    word-spacing:20px;
 	    word-break: break-all;
-	    width:120px; 
+	    width:120px;
     }
     #calcRow1Timber > div > h5 {
         display: none;
@@ -1549,7 +1853,7 @@ section > div {
         margin-right:3%;
     }
     #logoWrapperTimber {
-        margin-left: 64%;    
+        margin-left: 64%;
     }
     #h4SectionTimber {
         margin-right: 3%;
@@ -1611,13 +1915,13 @@ section > div {
     	width: 420px;
     	margin: 0 auto;
     	height: 70px;
-    	margin-bottom: 15px;	
+    	margin-bottom: 15px;
     }
     #firstForm2Timber {
     	float: none;
     	width: 420px;
     	margin: 0 auto;
-    	height: 70px;	
+    	height: 70px;
     }
     #labelFloatedYourDetails {
 		height: auto;
@@ -1677,11 +1981,26 @@ section > div {
     	margin: 0 auto;
     	width: 100%;
     }
-    #pPlusInputDoorDet1,#pPlusInputDoorDet2,#pPlusInputDoorDet3,#pPlusInputDoorDet4,#pPlusInputDoorDet5,#pPlusInputDoorDet6 {
+    #mainWrapperTimber #pPlusInputDoorDet4,#mainWrapperTimber #pPlusInputDoorDet5,#mainWrapperTimber #pPlusInputDoorDet6 {
     	margin: 0 auto;
-    	width: 440px;
+    	width: 320px;
     	float: none;
     	height: 25px;
+    }
+    #mainWrapperTimber #pPlusInputDoorDet3,#mainWrapperTimber #pPlusInputDoorDet2,#mainWrapperTimber #pPlusInputDoorDet1 {
+        display: inline-block;
+        float: none;
+        width: 440px;
+        margin: 0px;
+        background-color: red;
+    }
+    #mainWrapperTimber #comAndDoor  #pPlusInputDoorDet3 p,#mainWrapperTimber #pPlusInputDoorDet2 p,#mainWrapperTimber #pPlusInputDoorDet1 p {
+        display: inline-block;
+        float: none;
+    }
+    #mainWrapperTimber #pPlusInputDoorDet3 input,#mainWrapperTimber #pPlusInputDoorDet2 select,#mainWrapperTimber #pPlusInputDoorDet1 input {
+        display: inline-block;
+        float: none;
     }
     #pPlusInputDoorDet1Son2 {
     	float: left;
@@ -1689,7 +2008,7 @@ section > div {
     #comAndDoorFormTimber p {
         float: none;
         margin-left: 0px;
-    }  
+    }
     #pPlusInputDoorDet1Son1 {
     	float: left;
     	width: 130px;
@@ -1702,6 +2021,7 @@ section > div {
     }
     #doorDetailsWrapperTimber #doorColorTimber {
     	display: inline-block;
+        width: 200px;
     }
     #pPlusInputDoorDet1Son3 {
     	float: left;
@@ -1845,14 +2165,14 @@ section > div {
     	text-align: center;
     }
     #secondFormTimber #LockAndSuppCheboxTimber p {
-        float: none;   	
+        float: none;
     }
     #secondFormTimber #LockAndSuppCheboxTimber span {
-       display: none;    
+       display: none;
     }
     #secondFormTimber #LockAndSuppCheboxTimber input {
         width: 24px;
-    	height: 24px;   	
+    	height: 24px;
     }
     #doorLookWrapper1Timber {
 	    width: 100%;
@@ -1910,7 +2230,7 @@ section > div {
     #thirdFormTimber #suppAndFitRebChekTimber p {
     	float: none;
     	height: auto;
-    	line-height:25px; 
+    	line-height:25px;
     }
     #suppAndFitRebChekTimber {
     	line-height: 25px;
@@ -1996,9 +2316,11 @@ section > div {
     }
     #graphDiv1Timber {
         margin-top: 15px;
-    }
+        position: relative;
+    }    
     #graphDiv2Timber {
         margin-top: 10px;
+        position: 
     }
     #divForFloatDoorOpenTimber {
         padding-left: 0%;
@@ -2056,9 +2378,9 @@ section > div {
         margin-right: 0px;
     }
     #pPlusInputDoorDet7,#pPlusInputDoorDet8,#pPlusInputDoorDet12,#pPlusInputDoorDet13 {
-        background-color:#e5e5e5; 
-    }    
-}    
+        background-color:#e5e5e5;
+    }
+}
 @media (max-width:890px) {
 	.mainWrapper1TimberDoors {
         margin-left: 2.5%;
@@ -2101,7 +2423,7 @@ section > div {
         float: none;
     	width: 320px;
     	margin: 0 auto;
-    	margin-bottom: 50px;	
+    	margin-bottom: 50px;
     }
     #h4SectionTimber h4 {
 	    margin: 0px;
@@ -2179,22 +2501,25 @@ section > div {
     }
 }
 @media (max-width:400px) {
-    #comAndDoorFormTimber {       
+    #comAndDoorFormTimber {
        margin-left: 2px;
     }
-    #pPlusInputDoorDet4,#pPlusInputDoorDet5 {      
+    #pPlusInputDoorDet4,#pPlusInputDoorDet5 {
         margin-left: 2px;
     }
-    #pPlusInputDoorDet6 {       
+    #pPlusInputDoorDet6 {
         margin-left: 2px;
     }
 }
 @media print {
 	body {
-		-webkit-print-color-adjust: exact; 
+		-webkit-print-color-adjust: exact;
 		color-adjust: exact;
         margin: 25mm 25mm 25mm 30mm;
 	}
+    #all_codes_main {
+        display: none !important;
+    }
 	#formShareMailTimber {
 	   	display: none;
 	}
@@ -2272,8 +2597,32 @@ section > div {
 	    height: 40px;
 	    line-height: 40px;
     }
+    #formWrapperTimber #logoDivTimber img {
+        display: none;
+    }
+    #formWrapperTimber #faxOrdersAndEmailTimber {
+        display: none;
+    }
+    #formWrapperTimber #faxOrdersAndEmailTimber h2 {
+        display: none;
+    }
+    #formWrapperTimber #firstFormTimber {
+        margin-bottom: 70px;
+    }
+    #formWrapperTimber #warrantyChekboxsesTimber {
+        margin-bottom: 150px;
+    }
+    #formWrapperTimber #doorDetailsWrapperTimber {
+        margin-bottom: 150px;
+    }
+    #formWrapperTimber #secondFormTimber {
+        margin-bottom: 160px;
+    }
+     #formWrapperTimber #thirdFormTimber {
+        margin-bottom: 160px;
+    }
 }
-@page 
+@page
     {
         size:  auto;   /* auto is the initial value */
         margin: 0mm;  /* this affects the margin in the printer settings */

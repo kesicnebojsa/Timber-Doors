@@ -13,10 +13,10 @@ function addDrillPairGlassExtracolor() {
 	if (DOOREXTRACOLOR == 'on') {
 		price+=80;
 	}
-/*   if (DOOREXTRACOLOR2 == 'on') {
-		price+=80;
+   if (DOOREXTRACOLOR2 == 'on') {
+		price+=98;
 	}
-*/
+
 
 	//add pairs
 	if (DOORPAIRS=='pair') {
@@ -209,7 +209,7 @@ function changeAllPrices() {
 	});
 }
 
-var DOORWIDTH, DOORHEIGHT, DOORPAIRS, DOORDRILLING, DOORGLASS, DOORVIEWER, DOOREXTRACOLOR; /* DOOREXTRACOLOR2*/
+var DOORWIDTH, DOORHEIGHT, DOORPAIRS, DOORDRILLING, DOORGLASS, DOORVIEWER, DOOREXTRACOLOR, DOOREXTRACOLOR2;
 function doAllCalculations() {
 	DOORHEIGHT = $('#inputDoorHeightTimber').val();
 	DOORWIDTH = $('#inputDoorwidthTimber').val();
@@ -218,7 +218,7 @@ function doAllCalculations() {
 	DOORGLASS = $('#glassTimber').val();
 	DOORVIEWER = $('#eyeViewerTimber:checked').val();
 	DOOREXTRACOLOR = $('#extraColorTimber:checked').val();
-    /*DOOREXTRACOLOR2 = $('#extraColorTimber2:checked').val();*/
+    DOOREXTRACOLOR2 = $('#extraColorTimber2:checked').val();
 
 	//Prepare object for TAB2 Ajax form
 
@@ -230,7 +230,7 @@ function doAllCalculations() {
   	emailObject["Glass"] = DOORGLASS;
   	emailObject["Supply and Fit Eye Viewer"] = DOORVIEWER;
   	emailObject["Extra Color"] = DOOREXTRACOLOR;
-    /*emailObject["Extra Color2"] = DOOREXTRACOLOR2;*/
+    emailObject["Extra Color2"] = DOOREXTRACOLOR2;
 
 	// Regex - set input field border color as you type TAB2
 
@@ -1085,4 +1085,7 @@ $('select').on('change', function() {
 });
 
 // DEV
-$('#calcTab2Timber').trigger('click');
+// $('#calcTab2Timber').trigger('click');
+$('#all_pages_warrenty_warning1').on("click", function(){
+	window.location.href = "mailto:quotes@parkwooddoors.co.nz?subject=Subject";
+})

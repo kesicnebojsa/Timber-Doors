@@ -31,10 +31,10 @@ require_once '../src/init.php';
 				</div>
 				<div class="clear"></div>
                 <div id="all_pages_warrenty_warning">
-                    <a href="http://parkwooddoors.co.nz/brochures/door-warranties/"><p>All exterior timber doors must be placed in a weather protected situation to be covered by warranty.</p></a>
+                    <a href="http://parkwooddoors.co.nz/brochures/door-warranties/">All exterior timber doors must be placed in a weather protected situation to be covered by warranty.</a>
                 </div>
                 <div id="all_pages_warrenty_warning1">
-                    <a href="quotes@parkwooddoors.co.nz"><p>Contact us for all prices outside this tool. Email quotes@parkwooddoors.co.nz</p></a>
+                    <a>Contact us for all prices outside this tool. Email quotes@parkwooddoors.co.nz</a>
                 </div>
 			</div>
 			<section id="userDetailsPageTimber">
@@ -410,6 +410,8 @@ require_once '../src/init.php';
 						<input type="checkbox" id="extraColorTimber" name="extraColorTimber">
 						<h3>Signature Finish Kit</h3>
 						<input type="checkbox" id="extraColorTimber2" name="extraColorTimber2">
+                        <h3>Warranty Plus</h3>
+                        <input type="checkbox" id="warrantyPlus" name="warrantyPlus">
 					</div>
 					<button id='mailButtonTimber' type='submit' name='submitTimber'>Send me e-mail <br> <span>(using this selection)</span></button>
 					<button id='printButtonTimber' > Print <br> <span>(using this selection)</span></button>
@@ -690,6 +692,7 @@ require_once '../src/init.php';
 								<p><label for="rebatedYesChekTimber">Rebated which way : </label></p>
 							</div>
 							<div id="mainGraphDiv1Timber">
+                                <div class="outsideWord">Outside</div>
 								<div id="divForFistGraphTimber">
 									<input id="divForFistGraph2Timber1" name="RebatedWay" value="Left" type="radio">
 								</div>
@@ -702,6 +705,7 @@ require_once '../src/init.php';
 								</div><!-- graphDiv1 -->
 							</div><!-- mainGraphDiv1 -->
 							<div id="mainGraphDiv2Timber">
+                                <div class="outsideWord">Outside</div>
 								<div id="divForSecondGraphTimber">
 									<p><b> : </b></p>
 									<input id="divForFistGraph2Timber1" name="RebatedWay" value="Right" type="radio">
