@@ -13,12 +13,12 @@ define('INC', SRC . 'inc' . DS);
 define('MYSITE', 'https://localhost/Timber-Doors/public_html/');
 
 //		email constants
-define('MAILHOST','mail.stevancuk.com');  		//  set smtp server host
+define('MAILHOST','smtp.gmail.com');  			//  set smtp server host
 define('MAILPORT',587); 						//  set smtp server port (usually 465 for ssl, 587 for tls)
 define('MAILAUTH',true); 			 			//  whether to use SMTP authentication, false otherwise
-define('MAILUSERNAME','stevan@stevancuk.com');	//  set server email username for authentication
-define('MAILPASSWORD','elf666priest');		    //  set server email password for authentication
-define('MAILFROM','stevan@stevancuk.com');		//  set who the message appears to be sent from (part of mail headers)
+define('MAILUSERNAME','ikactest@gmail.com');	//  set server email username for authentication
+define('MAILPASSWORD','wefrbhlwnpobyxsp');		    //  set server email password for authentication
+define('MAILFROM','ikactest@gmail.com');		//  set who the message appears to be sent from (part of mail headers)
 define('MAILORDERSTO','ikactest@gmail.com');	//  !!! this e-mail will receive ORDERS e.g. orders@parkwooddoors.co.nz
 
 #######################################################################################################################
