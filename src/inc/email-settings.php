@@ -38,7 +38,7 @@ $msg .= 'Door Width: ' . $V->h($_POST['Door_Width']) . '<br>';
 	elseif($_POST['Pairs']==='rebate'):
 		$msg .= 'Pairs: Rebated pair <br>';
 	elseif($_POST['Pairs']==='pair'):
-		$msg .= 'Pairs: Pair-of-doors Kit <br>';
+		$msg .= 'Pairs: Rebated pair with pair-of-doors Kit <br>';
 	endif;
 
 	if($_POST['Drilling']==='noLocks'):
