@@ -741,7 +741,7 @@ require_once '../src/init.php';
 					</div>
 					<div id="CommentBoxWrapper">
 						<textarea id="text_area" name="commentbox" placeholder="Leave a comment..."></textarea>
-					</div>				
+					</div>
 				</div>
 				<div id="fifthFormTimber">
 					<button id='submitButtonOrderTimber' name="SubmitOrder" type="submit"> Submit </button>
@@ -770,15 +770,13 @@ require_once '../src/init.php';
             	</div>
             	<h2>EMAIL NOT SENT</h2>
             </div>
-		<section>
 
 		<h1 id="entrance_door_models_title"> ENTRANCE DOORS </h1>
 
+		<section>
 <?php
 require_once INC . 'doors-array.php';
-foreach ($doors as $k => $v): ?>
-
-	<?php
+foreach ($doors as $k => $v):
 	foreach ($v as $dc => $dm):
 		$d = new DoorModel($dc);
         $idNoSpace = str_replace([' ','&','/','(',')','.'], '', $dm); ?>
@@ -871,23 +869,23 @@ foreach ($doors as $k => $v): ?>
 				<div class='clear'></div>
 			</div>
 <?php if (($k % 2 == 0) and ($k != 82)):?>
-	            <div class='clear'></div>
+	    	<div class='clear'></div>
 		</section>
+
 		<section>
-<?php endif; ?>		
-	
+<?php endif; ?>
 <?php endforeach; endforeach;?>
-		<div class='clear'></div>
+			<div class='clear'></div>
 		</section>
+
 		<h1 id="internal_door_models_title"> INTERNAL DOORS </h1>
+
 		<section>
 <?php foreach ($doorsInternal as $k => $v): ?>
-
-	<?php
-	foreach ($v as $dc => $dm):
+	<?php foreach ($v as $dc => $dm):
 		$d = new DoorModel($dc);
         $idNoSpace = str_replace([' ','&','/','(',')','.'], '', $dm); ?>
-			<div class='mainWrapper1TimberDoors' id='<?php o($idNoSpace);?>'>
+		<div class='mainWrapper1TimberDoors' id='<?php o($idNoSpace);?>'>
 				<div class='codeTimberDoorsH2'>
 					<h2><?php o($dm);?></h2>
 					<div class='clear'></div>
@@ -974,15 +972,16 @@ foreach ($doors as $k => $v): ?>
 					</div>
 				</div>
 				<div class='clear'></div>
-			</div>		
+			</div>
 <?php if (($k % 2 == 0) and ($k != 82)):?>
-	            <div class='clear'></div>
+	    	<div class='clear'></div>
 		</section>
+
 		<section>
-<?php endif; ?>		
-	
+<?php endif; ?>
 <?php endforeach; endforeach;?>
-		<div class='clear'></div>	
+			<div class='clear'></div>
+		</section>
 	</div><!-- allModelsWrapper -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
