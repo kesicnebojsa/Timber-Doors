@@ -73,7 +73,7 @@ $msg .= 'Door Width: ' . $V->h($_POST['Door_Width']) . '<br>';
 
 	$msg .= (isset($_POST['Supply_and_Fit_Eye_Viewer']) && $_POST['Supply_and_Fit_Eye_Viewer']=='on') ? 'Machine and Supply: Selected <br>' : 'Machine and Supply: Not Selected <br>';
 	$msg .= (isset($_POST['Extra_Color']) && $_POST['Extra_Color']=='on') ? 'Temporary Single Base Coat - Sikkens HLS Dark Oak: Selected <br>' : 'Temporary Single Base Coat - Sikkens HLS Dark Oak: Not Selected <br>';
-	$msg .= (isset($_POST['Extra_Color2']) && $_POST['Extra_Color']=='on') ? 'Signature Finish Kit: Selected <br>' : 'Signature Finish Kit: Not Selected <br>';
+	$msg .= (isset($_POST['Extra_Color2']) && $_POST['Extra_Color2']=='on') ? 'Signature Finish Kit: Selected <br>' : 'Signature Finish Kit: Not Selected <br>';
 
 else:
 	$msg = 'Comment box message:<br>';
