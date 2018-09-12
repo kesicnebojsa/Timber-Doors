@@ -104,6 +104,13 @@ else:
 	$mail->Subject = 'Order id: ' . $id;
 endif;
 
+$mail->SMTPOptions = array(
+'ssl' => array(
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true
+));
+
 $mail->setFrom($mailfrom , 'Parkwood Doors');
 $mail->addAddress($mailto);
 $mail->SMTPDebug = 0;
