@@ -32,10 +32,10 @@ function addDrillPairGlassExtracolor() {
 	if (DOORDRILLING=='special') {
 		price+=150;
 	}
-	// eye viewer
-	if (DOORVIEWER == 'on') {
-		price+=65;
-	}
+	// // eye viewer
+	// if (DOORVIEWER == 'on') {
+	// 	price+=65;
+	// }
 }
 
 var price;
@@ -209,14 +209,15 @@ function changeAllPrices() {
 	});
 }
 
-var DOORWIDTH, DOORHEIGHT, DOORPAIRS, DOORDRILLING, DOORGLASS, DOORVIEWER, DOOREXTRACOLOR, DOOREXTRACOLOR2;
+var DOORWIDTH, DOORHEIGHT, DOORPAIRS, DOORDRILLING, DOORGLASS, DOOREXTRACOLOR, DOOREXTRACOLOR2;
+// var DOORVIEWER;
 function doAllCalculations() {
 	DOORHEIGHT = $('#inputDoorHeightTimber').val();
 	DOORWIDTH = $('#inputDoorwidthTimber').val();
 	DOORPAIRS = $('#singleTimber').val();
 	DOORDRILLING = $('#drillingTimber').val();
 	DOORGLASS = $('#glassTimber').val();
-	DOORVIEWER = $('#eyeViewerTimber:checked').val();
+	// DOORVIEWER = $('#eyeViewerTimber:checked').val();
 	DOOREXTRACOLOR = $('#extraColorTimber:checked').val();
     DOOREXTRACOLOR2 = $('#extraColorTimber2:checked').val();
 
@@ -228,7 +229,7 @@ function doAllCalculations() {
   	emailObject["Pairs"] = DOORPAIRS;
   	emailObject["Drilling"] = DOORDRILLING;
   	emailObject["Glass"] = DOORGLASS;
-  	emailObject["Supply and Fit Eye Viewer"] = DOORVIEWER;
+  	// emailObject["Supply and Fit Eye Viewer"] = DOORVIEWER;
   	emailObject["Extra Color"] = DOOREXTRACOLOR;
     emailObject["Extra Color2"] = DOOREXTRACOLOR2;
 
@@ -504,6 +505,13 @@ function tab2Totab3Inputs() {
 	$('#glassType1Timber').val( $("#glassTimber option:selected").text() );
 	$('#doorSizeHightTimber').val(DOORHEIGHT);
 	$('#DoorWidth1Timber').val(DOORWIDTH);
+
+	if( $('#warrantyPlus').prop("checked") ) {
+		$('#warChek1Timber').prop('checked', true);
+	}else{
+		$('#warChek2Timber').prop('checked', true);
+	}
+
 }
 
 //  ****************************   TAB 2   *******************************
@@ -723,7 +731,8 @@ function makeObjectForPDF() {
 	for (var i = 0; i < $('#mainFormForprint input').length; i++) {
 		if(/\bradio\b/.test($('#mainFormForprint input').eq(i).attr("type"))){
 			if($('#mainFormForprint input').eq(i).is(':checked')) {
-				if(!(/\bDoorViewer\b|\bProtectiveWrap\b|\bTempOak\b/.test($('#mainFormForprint input').eq(i).attr("name"))
+				// if(!(/\bDoorViewer\b|\bProtectiveWrap\b|\bTempOak\b/.test($('#mainFormForprint input').eq(i).attr("name"))
+				if(!(/\bProtectiveWrap\b|\bTempOak\b/.test($('#mainFormForprint input').eq(i).attr("name"))
 					&& (!$('#mainFormForprint input').eq(i).is(':checked')) )) {
 					objectForPDF[$('#mainFormForprint input').eq(i).attr("name")] = $('#mainFormForprint input').eq(i).val();
 				}
@@ -870,7 +879,7 @@ $('#emailWarningRelative23').click(function(){
 })
 
 //	Make optional radio buttons on TAB3 switch off
-$('#doorViewerInputTimber, #extrProtWrapInputTimber, #temporarySimpleOakInputTimber').click(function(){
+$('#extrProtWrapInputTimber, #temporarySimpleOakInputTimber').click(function(){
 	thisRadio = $(this);
     if (thisRadio.hasClass("imChecked")) {
         thisRadio.removeClass("imChecked");
@@ -1077,7 +1086,7 @@ $('#all_codes_all_codes > div').on("click", function() {
 $('input').on('input',function(){
 	doAllCalculations();
 });
-$('#eyeViewerTimber, #extraColorTimber').on('change',function(){
+$('#extraColorTimber').on('change',function(){
 	doAllCalculations();
 });
 $('select').on('change', function() {

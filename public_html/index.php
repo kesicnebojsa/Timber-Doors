@@ -7,6 +7,7 @@ require_once '../src/init.php';
 <meta charset="utf-8" />
 <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
 	<title>Timber Doors</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?= getAssetLink('cssVer*.css','css'); ?>">
 </head>
 <body>
@@ -78,7 +79,7 @@ require_once '../src/init.php';
 					<h4> Telephone: 06 349 1818</h4>
 					<h4> Fax: 06 343 6184</h4>
 					<h4> Email: sales@parkwooddoors.co.nz</h4>
-					<h4> Webiste: parkwooddoors.co.nz</h4>
+					<h4> Website: parkwooddoors.co.nz</h4>
 				</div>
 			</section>
 		</div>
@@ -371,6 +372,9 @@ require_once '../src/init.php';
 							<option name="singleTimber" value="pair" title="Pair, supplied with pair of doors kit: rebated, rebate kit &amp; flushbolts fitted">Rebated pair with pair-of-doors Kit </option>
 						</select>
 					</div>
+					<div class="infoDiv" >							
+							<p><b>P</b>air-of-doors Kit includes rebated stiles, machining for standard lock, supply & fit 5308BN flush bolts and standard rebate kit</p>
+						</div>
 					<div class="borderedTimber">
 						<h3>DRILLING</h3>
 						<select id="drillingTimber">
@@ -380,14 +384,7 @@ require_once '../src/init.php';
 						</select>
 					</div>
 					<div class='borderedTimber'>
-						<div id='glassH3andPDiv'><h3 id='glassFormHeading'>GLASS<span>Hints</span></h3></div>
-						    <div id='paragraphDivGlassCalcRelative'>
-								<div id='paragraphDivGlassCalcAbsolute'>
-									<p><b>A</b>ll stain quality pricing includes beads for single glazing</p>
-									<p><b>A</b>ll paint quality pricing exclude beads</p>
-									<p><b>S</b>elect double glazing beads only or glass from the drop down below</p>
-								</div>
-							</div>
+						<div id='glassH3andPDiv'><h3 id='glassFormHeading'>GLASS</h3></div>
 						<select id="glassTimber">
 							<option name="glassTimber" value="noGlass">No Glass</option>
 							<option name="glassTimber" value="clearGlass">Clear or Tinted</option>
@@ -401,10 +398,17 @@ require_once '../src/init.php';
 							<option name="glassTimber" value="doubleGlazing">Beaded For Double Glazing</option>
 						</select>
 					</div>
-					<div class='borderedTimber'>
+				    <!-- <div id='paragraphDivGlassCalcRelative'> -->
+						<div class="infoDiv" >							
+							<p><b>A</b>ll stain quality pricing includes beads for single glazing</p>
+							<p><b>A</b>ll paint quality pricing exclude beads</p>
+							<p><b>S</b>elect double glazing beads only or glass from the drop down below</p>
+						</div>
+					<!-- </div> -->
+					<!-- <div class='borderedTimber'>
 						<h3>Machine and Supply</h3>
 						<input type="checkbox" id="eyeViewerTimber" name="eyeViewerTimber">
-					</div>
+					</div> -->
 					<div class='borderedTimber'>
 						<h3>Temporary Single Base Coat - Sikkens HLS Dark Oak</h3>
 						<input type="checkbox" id="extraColorTimber" name="extraColorTimber">
@@ -583,10 +587,10 @@ require_once '../src/init.php';
 					<div class='clear'></div>
 					<div id="doorDetailsForm4Timber" class='backgDoorTypetimber'>
 						<div id="comAndDoorForm4Timber">
-							<div id='pPlusInputDoorDet9'>
+							<!-- <div id='pPlusInputDoorDet9'>
 								<p id="doorViewerTimber">Machine and Supply Door Viewer <span>:</span> </p>
 								<input class='' type="radio" name="DoorViewer" id="doorViewerInputTimber" value="SELECTED">
-							</div>
+							</div> -->
 							<div id='pPlusInputDoorDet10'>
 								<p id="extraProtWrapTimber"> Extra Protective Wrap $35 <span>:</span> </p>
 								<input name="ProtectiveWrap" id="extrProtWrapInputTimber" type="radio" value="SELECTED">

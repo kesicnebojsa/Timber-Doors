@@ -1340,18 +1340,19 @@ section > div {
     background-color:#00296b;
     cursor: pointer;
 }
-#paragraphDivGlassCalcRelative {
+/*#paragraphDivGlassCalcRelative {
 	position: relative;
+}*/
+.infoDiv {
+	display: block;
+	/*color:#ff9000;*/
+    padding: 5px;
+    border: 1px dotted black;
+    border-radius: 5px;
+    margin: 10px 0px;
 }
-#paragraphDivGlassCalcAbsolute {
-	display: none;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	z-index: 1;
-	background-color:#6d665d;
-	color:#ff9000;
-    padding: 10px;
+.infoDiv p {
+    font-size: 12px;
 }
 .inputHeightWidthTimber label {
 	display: inline-block;
